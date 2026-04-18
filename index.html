@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDCAT Conference Portal</title>
+  <meta name="description" content="Official portal for PDCAT conference websites by year.">
+  <link rel="canonical" href="https://www.pd-cat.org/">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Merriweather:300,400,700,900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0b2239;
+      --navy-deep: #08192b;
+      --blue: #1f5c8a;
+      --blue-soft: #2d6f9f;
+      --gold: #f3c14b;
+      --gold-deep: #dba62b;
+      --white: #ffffff;
+      --text-soft: #d6e3ef;
+      --text-mid: #b9cad8;
+      --line: rgba(255,255,255,0.14);
+      --card: rgba(255,255,255,0.07);
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+      --radius: 18px;
+      --maxw: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: var(--white);
+      background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 38%, #11456b 100%);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--maxw));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 25, 43, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      font-size: 1.02rem;
+      color: var(--white);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      background:
+        linear-gradient(rgba(8, 25, 43, 0.58), rgba(8, 25, 43, 0.72)),
+        radial-gradient(circle at top right, rgba(243,193,75,0.12), transparent 24%),
+        radial-gradient(circle at left center, rgba(255,255,255,0.06), transparent 26%);
+    }
+
+    .hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(243,193,75,0.14);
+      color: #ffe199;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2.1rem, 4vw, 3.9rem);
+      line-height: 1.2;
+      color: var(--white);
+    }
+
+    .hero p {
+      margin: 0 auto 28px;
+      max-width: 850px;
+      color: var(--text-soft);
+      font-size: 1.02rem;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 180px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: all 0.22s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #10253d;
+      box-shadow: 0 10px 26px rgba(243,193,75,0.28);
+    }
+
+    .btn-primary:hover {
+      background: #ffd25f;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.11);
+      transform: translateY(-2px);
+    }
+
+    .info-band {
+      background: rgba(255,255,255,0.04);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 24px 0;
+    }
+
+    .info-box {
+      padding: 20px 18px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .info-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.02rem;
+      color: var(--white);
+    }
+
+    .info-box p {
+      margin: 0;
+      color: var(--text-mid);
+      line-height: 1.75;
+      font-size: 0.95rem;
+    }
+
+    .years-section {
+      padding: 70px 0 78px;
+      background: linear-gradient(180deg, #1a5a87 0%, #11456b 100%);
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 40px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 12px;
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      color: var(--white);
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.85;
+    }
+
+    .year-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .year-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease;
+    }
+
+    .year-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.11);
+      border-color: rgba(255,255,255,0.22);
+    }
+
+    .year-label {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(243,193,75,0.16);
+      color: #ffe199;
+    }
+
+    .year-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.95rem;
+      color: var(--white);
+    }
+
+    .year-meta {
+      margin-bottom: 14px;
+      color: #d6e3ef;
+      font-size: 0.95rem;
+    }
+
+    .year-desc {
+      color: var(--text-soft);
+      line-height: 1.8;
+      margin-bottom: 22px;
+      min-height: 112px;
+    }
+
+    .year-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .mini-btn {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      transition: all 0.2s ease;
+    }
+
+    .mini-btn:hover {
+      background: rgba(243,193,75,0.16);
+      border-color: rgba(243,193,75,0.32);
+      color: #fff4cf;
+      transform: translateY(-2px);
+    }
+
+    .latest-card {
+      border-color: rgba(243,193,75,0.28);
+      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.07));
+    }
+
+    .footer {
+      padding: 32px 0 42px;
+      text-align: center;
+      background: #0a1a2a;
+      color: #a8bfd4;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer a {
+      color: #f6d67b;
+    }
+
+    @media (max-width: 1024px) {
+      .info-grid,
+      .year-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .year-desc {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding-top: 72px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">PDCAT</div>
+      <div class="nav-links">
+        <a href="#years">Conference Years</a>
+        <a href="/2026/">Latest Site</a>
+        <a href="/2025/">Archive</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="eyebrow">Official Conference Portal</div>
+      <h1>Parallel and Distributed Computing, Applications and Technologies</h1>
+      <p>
+        Welcome to the official PDCAT conference portal. 
+        <!-- This entry page provides access to different conference editions while preserving a consistent visual identity with the main conference website. -->
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/2026/">Enter PDCAT 2026</a>
+        <a class="btn btn-outline" href="#years">Browse Conference Years</a>
+      </div>
+    </div>
+  </header>
+  <section class="years-section" id="years">
+    <div class="container">
+      <div class="section-title">
+        <h2>Conference Years</h2>
+      </div>
+
+      <div class="year-grid">
+        <div class="year-card latest-card">
+          <div class="year-label">Latest</div>
+          <h3>PDCAT 2026</h3>
+          <div class="year-meta">Current conference website</div>
+          <div class="year-desc">
+            Access the latest information including the call for papers, submission instructions, registration details, keynote announcements, venue updates, and program information.
+          </div>
+          <div class="year-actions">
+            <a class="mini-btn" href="/2026/">Enter Site</a>
+            <a class="mini-btn" href="/2026/call_for_paper.html">Call for Papers</a>
+            <a class="mini-btn" href="/2026/submission.html">Submission</a>
+          </div>
+        </div>
+
+        <div class="year-card">
+          <div class="year-label">Archive</div>
+          <h3>PDCAT 2025</h3>
+          <div class="year-meta">Gold Coast, Australia</div>
+          <div class="year-desc">
+            Visit the 2025 conference website for archived conference information, venue details, keynote information, program pages, and other preserved materials.
+          </div>
+          <div class="year-actions">
+            <a class="mini-btn" href="/2025/">Enter Site</a>
+            <a class="mini-btn" href="/2025/program.html">Program</a>
+            <a class="mini-btn" href="/2025/keynote.html">Keynotes</a>
+          </div>
+        </div>
+<!-- 
+        <div class="year-card">
+          <div class="year-label">Future</div>
+          <h3>More Editions</h3>
+          <div class="year-meta">Ready for expansion</div>
+          <div class="year-desc">
+            You can continue adding future conference editions with the same structure, such as 2027 and 2028, without changing the DNS or custom domain setup.
+          </div>
+          <div class="year-actions">
+            <a class="mini-btn" href="/2025/">Example Archive</a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      Official PDCAT Conference Portal<br>
+    </div>
+  </footer>
+</body>
+</html>

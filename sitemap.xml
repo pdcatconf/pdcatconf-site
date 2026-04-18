@@ -1,45 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://www.pd-cat.org/</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://www.pd-cat.org/call_for_paper.html</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://www.pd-cat.org/2025/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://www.pd-cat.org/submission.html</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://www.pd-cat.org/2025/call_for_paper.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.pd-cat.org/program.html</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://www.pd-cat.org/2025/submission.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.pd-cat.org/keynote.html</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://www.pd-cat.org/2025/program.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pd-cat.org/2025/keynote.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://www.pd-cat.org/venue.html</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://www.pd-cat.org/2025/venue.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://www.pd-cat.org/organization.html</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://www.pd-cat.org/2025/organization.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <url>
+    <loc>https://www.pd-cat.org/2026/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pd-cat.org/2026/call_for_paper.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pd-cat.org/2026/submission.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pd-cat.org/2026/program.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pd-cat.org/2026/keynote.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pd-cat.org/2026/venue.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pd-cat.org/2026/organization.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
