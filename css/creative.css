@@ -200,7 +200,6 @@ img::-moz-selection {
 header.masthead {
   padding-top: 0px;
   padding-bottom: 10px;
-  background-image: url("../img/header.jpeg");
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
