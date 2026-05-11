@@ -1,2 +1,2 @@
-# pdcatconf2025
+# pdcatconf2026
 https://www.pd-cat.org/
