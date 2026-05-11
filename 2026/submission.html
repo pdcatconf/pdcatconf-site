@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Minimal bootstrap head to avoid empty-head flash; the full head is appended below -->
+  <meta charset="utf-8">
+  <title>PDCAT 2026</title>
+
+  <!-- Preload partials before we fetch and insert them -->
+  <link rel="preload" href="my_head.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_navbar.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_footer.html" as="fetch" crossorigin>
+
+  <script>
+    // Safely append head partial without wiping existing tags
+    fetch('my_head.html')
+      .then(res => res.text())
+      .then(html => {
+        document.head.insertAdjacentHTML('beforeend', html);
+      })
+      .catch(console.error);
+  </script>
+  <!-- Bootstrap core CSS -->
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Plugin CSS -->
+<link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- Custom styles -->
+<link href="../css/creative.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Merriweather:300,400,700,900&display=swap" rel="stylesheet">
+
+</head>
+
+  <body id="page_top">
+    <div id="navbar-placeholder"></div>
+
+    <header>
+      <div class="title-class">
+
+      </div>
+    </header>
+
+    <section id="dates">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 ">
+            <h2 class="section-heading">Important Dates</h2>
+            <p>We are pleased to announce the important dates for PDCAT 2026.
+              Please mark your calendars! 
+              <br>
+              <em>All deadlines are based on Anywhere on Earth (AoE), at midnight on the specified date.</em>
+            </p>
+
+            <ul>
+              <li><strong>Paper Submission Deadline:</strong>1  August 2026 (extended)</li>
+              <li><strong>Notification of Acceptance:</strong> 15 September
+                2026</li>
+              <li><strong>Camera-Ready Submission Deadline:</strong> 30
+                September 2026</li>
+              <li><strong>Conference Dates:</strong> 28 – 30 November 2026 (AEST)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-heading">Paper Submissions</h2>
+            <p>Authors are invited to submit original and unpublished research
+              papers in English. Submissions should
+              present novel research results or significant practical
+              experiences. Submissions will be selected based on
+              their originality, timeliness, significance, relevance, and
+              clarity of presentation. The papers should be
+              formatted according to the Springer LNCS format. The submission
+              must be in PDF format.</p>
+
+            <p>The manuscript should not exceed 14 pages in the Springer LNCS style, including references. An optional appendix may be included, but it will not be counted toward the page limit.</p>
+            
+            <p>Springer’s LNCS LaTeX templates are available in OverLeaf (<a
+                href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WsdHOy5uZpg">Latex
+                Template</a>).
+            </p>
+
+            <p> For detailed author guidelines, please refer to
+              <a
+                href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines">Springer's
+                Information for Authors of Computer Science Proceedings.</a>
+            </p>
+
+            <p>
+              We invite all prospective authors to submit your manuscripts
+              through the PDCAT2026 submission portal,
+              hosted on <a href="https://meteor.springer.com/PDCAT2026" target="_blank"
+                class="btn btn-sm btn-primary">
+                Submit
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dates">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-heading">Conference Proceedings & SCI Journals</h2>
+            <p>
+              All accepted and presented papers will be published in the
+              <strong>Lecture Notes in Computer Science (LNCS)</strong> series by
+              <strong>Springer</strong>. Authors of accepted papers are required to complete the Springer copyright form
+              and ensure that their final manuscripts comply with Springer's formatting guidelines.
+            </p>
+            <p>
+            Selected papers presented
+            at the conference will be invited for extended publication in
+            special issues of <strong>SCI-indexed
+              journals</strong>. Here is a tentative list of journals:
+          </p>
+          <ul class="journal-list">
+            <li>
+              <a href="https://www.sciopen.com/journal/1007-0214"
+                target="_blank" rel="noopener noreferrer">
+                <em>Tsinghua Science and Technology</em>
+              </a>
+              <span class="impact-factor">(Impact Factor: 5.2)</span>
+            </li>
+            <li>
+              <a href="https://hcisj.com/" target="_blank"
+                rel="noopener noreferrer">
+                <em>Human-centric Computing and Information Sciences</em>
+              </a>
+              <span class="impact-factor">(Impact Factor: 3.9)</span>
+            </li>
+
+            <li>
+              <a href="https://hcisj.com/" target="_blank"
+                rel="noopener noreferrer">
+                <em>Computers and Electrical Engineering</em>
+              </a>
+              <span class="impact-factor">(Impact Factor: 4.0)</span>
+            </li>
+
+            <li>
+              <a href="https://hcisj.com/" target="_blank"
+                rel="noopener noreferrer">
+                <em>CCF Transactions on High Performance Computing</em>
+              </a>
+              <span class="impact-factor">(Impact Factor: 1.3)</span>
+            </li>
+          </ul>
+
+            <p>
+              These invitations will be extended based on the quality, originality, and relevance of the papers to the respective journal scopes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/creative.min.js"></script>
+
+<script>
+    fetch("my_navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link[data-page]").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+</script>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("my_footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  </body>
+
+</html>

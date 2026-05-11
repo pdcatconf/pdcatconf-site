@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Minimal bootstrap head to avoid empty-head flash; the full head is appended below -->
+  <meta charset="utf-8">
+  <title>PDCAT 2026</title>
+
+  <!-- Preload partials before we fetch and insert them -->
+  <link rel="preload" href="my_head.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_navbar.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_footer.html" as="fetch" crossorigin>
+
+  <script>
+    // Safely append head partial without wiping existing tags
+    fetch('my_head.html')
+      .then(res => res.text())
+      .then(html => {
+        document.head.insertAdjacentHTML('beforeend', html);
+      })
+      .catch(console.error);
+  </script>
+  <!-- Bootstrap core CSS -->
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Plugin CSS -->
+<link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Custom styles -->
+<link href="../css/creative.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Merriweather:300,400,700,900&display=swap" rel="stylesheet">
+</head>
+
+  <body id="page_top">
+    <div id="navbar-placeholder"></div>
+    
+  <header>
+    <div class="title-class">
+
+    </div>
+  </header>
+
+  <section id="dates">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 ">
+          <h2 class="section-heading">Important Dates</h2>
+          <p>We are pleased to announce the important dates for PDCAT 2026.
+            Please mark your calendars! 
+            <br>
+            <em>All deadlines are based on Anywhere on Earth (AoE), at midnight on the specified date.</em>
+          </p>
+
+          <ul>
+            <li><strong>Paper Submission Deadline:</strong>1 August 2026 (extended)</li>
+            <li><strong>Notification of Acceptance:</strong> 15 September
+              2026</li>
+            <li><strong>Camera-Ready Submission Deadline:</strong> 30
+              September 2026</li>
+            <li><strong>Conference Dates:</strong> 28 – 30 November 2026 (AEST)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="scope">
+    <div class="container text-left">
+      <h2 class="section-heading">Scope and Topics</h2>
+      <p class="mb-4">We invite submissions of original and unpublished research on, but not limited to, the following
+        topics:</p>
+
+      <div class="row mt-4">
+        <div class="col-lg-6">
+          <h4>Networking and Architectures</h4>
+          <ul>
+            <li>Parallel and distributed architectures</li>
+            <li>Interconnection networks</li>
+            <li>Heterogeneous and multimedia systems</li>
+            <li>Reliability, availability, and fault tolerance</li>
+            <li>Ubiquitous and pervasive computing systems</li>
+            <li>ATM and high-speed networks</li>
+            <li>Computer networks and optical networks</li>
+            <li>Communication and telecommunication systems</li>
+            <li>Wireless networks and mobile computing</li>
+            <li>Internet of Things (IoT)</li>
+            <li>Cloud and grid computing systems</li>
+            <li>Edge and fog computing</li>
+            <li>Reconfigurable computing architectures</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <h4>Algorithms and Applications</h4>
+          <ul>
+            <li>Artificial Intelligence algorithms</li>
+            <li>Database systems and data mining</li>
+            <li>Intelligent computing and neural networks</li>
+            <li>Parallel and distributed algorithms</li>
+            <li>Big data computing and analytics</li>
+            <li>Distributed data and knowledge-based systems</li>
+            <li>Image processing and computer graphics</li>
+            <li>High-performance scientific computing</li>
+            <li>Reconfigurable high-performance computing systems</li>
+            <li>Resource allocation and management</li>
+            <li>Network routing and communication algorithms</li>
+            <li>Bioinformatics and computational biology</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-6">
+          <h4>Software Systems and Technologies</h4>
+          <ul>
+            <li>Task mapping and job scheduling</li>
+            <li>Formal methods and programming languages</li>
+            <li>Internet computing and applications</li>
+            <li>Quantum computing and algorithms</li>
+            <li>Image processing and computer vision</li>
+            <li>Agent-based technologies</li>
+            <li>Operating systems and system software</li>
+            <li>Software tools and development environments</li>
+            <li>Parallelizing compilers and optimization</li>
+            <li>Web services and distributed applications</li>
+            <li>Component-based software technologies</li>
+            <li>Simulation, modeling, and visualization</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <h4>Security and Privacy</h4>
+          <ul>
+            <li>Distributed federated learning paradigms</li>
+            <li>Quantum-enabled federated learning frameworks</li>
+            <li>Privacy-preserving mechanisms for artificial intelligence</li>
+            <li>Security of artificial intelligence systems</li>
+            <li>Privacy-preserving crowd intelligence</li>
+            <li>Attack and defense algorithms in federated learning</li>
+            <li>Attack and defense strategies for edge computing</li>
+            <li>Quantum-based defense mechanisms in federated learning paradigms</li>
+            <li>Privacy-preserving computation techniques</li>
+            <li>Database security and cloud security</li>
+            <li>Access control, authorization, and biometric security</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-6">
+          <h4>High-Performance Systems</h4>
+          <ul>
+            <li>Operating systems for parallel and distributed systems</li>
+            <li>High-performance computer arithmetic</li>
+            <li>Memory hierarchy and caching</li>
+            <li>Performance tuning, optimization, and profiling</li>
+            <li>Human-computer interaction in parallel and distributed systems</li>
+            <li>Photonic and quantum computing</li>
+            <li>Media computing in parallel and distributed systems</li>
+            <li>Software engineering for parallel and distributed systems</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <h4>Big Data Management and Processing</h4>
+          <ul>
+            <li>Massive data stream processing in cloud environments</li>
+            <li>Graph analytics, social networks, and the semantic web</li>
+            <li>Data systems for knowledge discovery, data mining, and machine learning</li>
+            <li>Big data models and computational theory</li>
+            <li>Crowdsourced and collaborative data management</li>
+            <li>Distributed, decentralized, and parallel data management, including blockchain systems</li>
+            <li>Processing and analytics for graphs, social networks, and semantic web data</li>
+            <li>Security, privacy, and ethics in data and analytics</li>
+            <li>Multi-source data processing and integration</li>
+            <li>Deep learning models and applications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  </section>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="/vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/js/creative.min.js"></script>
+
+
+<script>
+    fetch("my_navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link[data-page]").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+</script>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("my_footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Minimal bootstrap head to avoid empty-head flash; the full head is appended below -->
+  <meta charset="utf-8">
+  <title>CFP PDCAT 2027</title>
+
+  <!-- Preload partials before we fetch and insert them -->
+  <link rel="preload" href="my_head.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_navbar.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_footer.html" as="fetch" crossorigin>
+
+  <script>
+    // Safely append head partial without wiping existing tags
+    fetch('my_head.html')
+      .then(res => res.text())
+      .then(html => {
+        document.head.insertAdjacentHTML('beforeend', html);
+      })
+      .catch(console.error);
+  </script>
+  <!-- Bootstrap core CSS -->
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Plugin CSS -->
+<link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Custom styles -->
+<link href="../css/creative.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Merriweather:300,400,700,900&display=swap" rel="stylesheet">
+</head>
+
+  <body id="page_top">
+    <div id="navbar-placeholder"></div>
+    
+  <header>
+    <div class="title-class">
+
+    </div>
+  </header>
+
+  <section id="dates">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 ">
+          <h2 class="section-heading">PDCAT2026 - Call for Papers</h2>
+          <p class="text-muted mt-3">
+          The 28<sup>th</sup> International Conference on Parallel and Distributed Computing,
+          Applications and Technologies (PDCAT2026) will be held on
+          28-30 November 2026 in XXX, XXX. Researchers and practitioners are warmly invited to submit to PDCAT 2026.
+        </p>
+        <p class="text-muted">
+          You can download the detailed <strong>Call for Papers (CFP)</strong> for PDCATT2026
+          from the link below and share it with colleagues who may be interested.
+        </p>
+        <a class="btn btn-primary btn-xl"
+           href="PDCAT2026-CFP.pdf"
+           target="_blank" rel="noopener">
+          Download CFP for PDCAT 2026 (PDF)
+        </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../js/creative.min.js"></script>
+
+
+<script>
+    fetch("my_navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link[data-page]").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+</script>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("my_footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  </body>
+
+</html>

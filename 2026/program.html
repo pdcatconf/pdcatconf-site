@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Minimal bootstrap head to avoid empty-head flash; the full head is appended below -->
+  <meta charset="utf-8">
+  <title>PDCAT 2026</title>
+
+  <!-- Preload partials before we fetch and insert them -->
+  <link rel="preload" href="my_head.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_navbar.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_footer.html" as="fetch" crossorigin>
+
+  <script>
+    // Safely append head partial without wiping existing tags
+    fetch('my_head.html')
+      .then(res => res.text())
+      .then(html => {
+        document.head.insertAdjacentHTML('beforeend', html);
+      })
+      .catch(console.error);
+  </script>
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles -->
+  <link href="../css/creative.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Merriweather:300,400,700,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="page_top">
+  <div id="navbar-placeholder"></div>
+
+  <header>
+    <div class="title-class">
+      <!-- <h1 class="text-uppercase">
+          <strong>The 20<sup class="text-lowercase">th</sup> International Conference on Parallel and Distributed Computing, Applications and Technologies</strong>
+        </h1>
+        <h1>
+          5-7 December 2019 <br> Gold Coast, Australia
+        </h1> -->
+    </div>
+  </header>
+
+  <section id="program">
+    <!-- <p class="text-center">Tentative</p> -->
+    <div class="container text-center">
+      <div class="row">
+        <div class="introduction">
+
+          <!-- Openning -->
+          <table width="1100" border="1" cellspacing="0" cellpadding="0" class="program"
+            style="background-color:#eefaff; line-height:40px;">
+            <tr height="60px">
+              <td colspan="3" bgcolor="#ff6c40"
+                style="color:#FFF; font-weight:bold; font-size:18px; line-height:40px; ">
+                November 22 AEST (Saturday) <br />
+                Conference Venue: ROOM 101</td>
+            </tr>
+
+            <tr>
+              <td width="20%">08:00 - 09:10</td>
+              <td width="80%" colspan="2">Registration & Arrival Tea/Coffee</td>
+            </tr>
+
+            <tr>
+              <td width="20%">09:00 - 09:30 </td>
+              <td width="80%" colspan="2">Opening Ceremony </td>
+            </tr>
+
+            <tr>
+              <td width="20%">09:30 - 10:30</td>
+              <td width="80%" colspan="2" align="left" style=" line-height:40px; text-align:left; padding-left:30px;">
+                <strong>Keynote Speaker: Dr Cheng-Zhong Xu </strong> <br />
+                Cloud-Edge Computing for Machine Learning and Large Models
+              </td>
+              <!-- <td width="20%">Chair
+              </td> -->
+            </tr>
+
+            <tr bgcolor="#fff4e3">
+              <td width="20%">10:30 - 11:00</td>
+              <td width="80%" colspan="2"> <strong>Coffee Break</strong></td>
+            </tr>
+
+            <tr>
+              <td width="20%">11:00 - 12:00</td>
+              <td width="80%" colspan="2" align="center" style=" line-height:40px; text-align:left; padding-left:30px;">
+                <strong>
+                  Keynote Speaker: Dr Chee Peng Lim</strong> <br />
+                Computational Intelligence-based Models for Data Analytics: Architectures, Algorithms, and Applications
+              </td>
+              <!-- <td width="20%"> Chair
+              </td> -->
+            </tr>
+
+            <tr bgcolor="#fff4e3">
+              <td width="20%">12:00 - 13:00 </td>
+              <td width="80%" colspan="2"> <strong>Lunch</strong></td>
+            </tr>
+            <!-- </table> -->
+
+            <!-- 1-A 2-A -->
+            <!-- <br /> -->
+            <!-- <table width="1100" border="1" cellspacing="0" cellpadding="0" class="program"
+            style="background-color:#eefaff; line-height:40px;"> -->
+            <!-- <tr height="60px">
+              <td colspan="3" bgcolor="#ff6c40"
+                style="color:#FFF; font-weight:bold; font-size:18px; line-height:40px;    ">
+                November 22 (Saturday) <br />
+                Conference Venue: ROOM 101
+              </td>
+            </tr> -->
+
+            <tr>
+              <td width="20%" rowspan="6">
+                Session 1-A <br />
+                <strong>Chair: Hui Tian</strong>
+              </td>
+              <td width="20%"> 13:00 - 13:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                A Quantum-GenAI-Enhanced Framework for Predictive and Privacy-Preserving Surveillance in CCTV
+                Networks<br />
+                <em>Abir El Azzaoui, Byung Hyun Jo, Ji Su Park, Jungho Kang, James Jong Hyuk Park</em>
+              </td>
+            </tr>
+
+            <tr>
+              <td width="20%"> 13:20 - 13:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Bandicoot: A Templated C++ Library for GPU Linear Algebra<br />
+                <em>Ryan Curtin, Marcus Edel, Conrad Sanderson</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 13:40 - 14:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                gCloudSim: A GPU Accelerated Simulator for learning-driven Cloud Resource Optimisation<br />
+                <em>Jie Zhao, Rajkumar Buyya</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:00 - 14:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Cost-Performance Analysis: A Comparative Study of CPU-Based Serverless and GPU-Based Training
+                Architectures<br />
+                <em>Amine Barrak, Fabio Petrillo, Fehmi Jaafar</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:20 - 14:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Efficient GNN-based Client Selection for Optimizing Resource Allocation in Hierarchical Federated
+                Learning<sup>★</sup><br />
+                <em>Chenghao Zhou, Huaiwen He, Hong Shen, Hui Tian</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:40 - 15:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Efficient Parallel Implementation of the Pilot Assignment Problem in Massive MIMO
+                Systems<sup>★</sup><br />
+                <em>Eman Alqudah, Ashfaq Khokhar</em>
+              </td>
+            </tr>
+
+            <tr bgcolor="#fff4e3">
+              <td width="20%" colspan="2"> 15:00 - 15:20 </td>
+              <td width="80%"> <strong> Coffee Break </strong></td>
+            </tr>
+
+            <tr>
+              <td width="20%" rowspan="6">
+                Session 2-A <br />
+                <strong>Chair: Chois Zhi Cai</strong>
+              </td>
+              <td width="20%"> 15:20 - 15:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                MuS-Q-Le: On the fly Multi-State Q-Learning for Large-Scale State and Action Spaces on GPU's <br />
+                <em>Julian Gross</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 15:40 - 16:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Multiplex Networks Oriented Industrial Scheduling with Cross-Layer Enterprise Coordination and
+                Heterogeneous Task Flows <br />
+                <em>Zhenyu Wang, Bingru Bao, Yichuan Jiang, Xianghui Hu</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 16:00 - 16:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Plug-and-Play Dynamic Programming for Parallel Execution and Benchmarking <br />
+                <em>Jiang Long</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 16:20 - 16:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Deep Q-Learning from Statistical Demonstrations for Efficient Battery Storage Energy Arbitrage<br />
+                <em>Chois Zhi Cai, Hui Tian, Leo Yu Zhang, Lee Weng</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 16:40 - 17:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                AI-based Micro-services for Real-time Analysis of Crowdfunding Campaigns Performance<sup>★</sup><br />
+                <em>Manar Ben Fraj, Nissaf Fredj, Ridha Jemmali, Samir Ksibi</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 17:00 - 17:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                TD3-Sched: Learning to Orchestrate Container-based Cloud–Edge Resources via Distributed Reinforcement
+                Learning<sup>★</sup><br />
+                <em>ShengYe Song, Minxian Xu, Kan Hu, Wenxia Guo, Kejiang Ye</em>
+              </td>
+            </tr>
+          </table>
+
+          <!-- 1-B 2-B -->
+          <br />
+          <table width="1100" border="1" cellspacing="0" cellpadding="0" class="program"
+            style="background-color:#eefaff; line-height:40px;">
+            <tr height="60px">
+              <td colspan="3" bgcolor="#ff6c40"
+                style="color:#FFF; font-weight:bold; font-size:18px; line-height:40px;    ">
+                November 22 AEST (Saturday) <br />
+                Conference Venue: ROOM 102
+              </td>
+            </tr>
+
+
+            <tr>
+              <td width="20%" rowspan="6">
+                Session 1-B <br />
+                <strong>Chair: Steven Gordon</strong>
+              </td>
+              <td width="20%"> 13:00 - 13:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                Analysis of FM Modulated Wave Propagation at 4.5 GHz using SDR in a Controlled Scenario <br />
+                <em>James Neira, Esneider Castiblanco</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 13:20 - 13:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Improving the Traditional Propagation Model on the Multi-layer Network: From Random Initialization to
+                Relationship-driven Influence<br />
+                <em>Zhengyi An, Xianghui Hu, Yichuan Jiang</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 13:40 - 14:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Scenario-Aware Pareto Optimization for Limited-Round Unknown-Opponent Competition<br />
+                <em>FanKe Chen, JiaKang Mei, Zongyang Liu, Yinghui Pan</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:00 - 14:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                A Comparative Performance of WiFi Spatial Reuse Solutions in 802.11ax<br />
+                <em>Haonan Chi, Wee Lum Tan, Hui Tian</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:20 - 14:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Machine Learning Forecasting of Romanian Earthquakes: Challenges and Opportunities<sup>★</sup><br />
+                <em>Sara Boanca</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:40 - 15:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Approximation algorithm for prize-collecting constraint sweep edge cover problem with base
+                stations<sup>★</sup><br />
+                <em>Ying Yin, Wencheng Wang, Xiaofei Liu</em>
+              </td>
+            </tr>
+
+            <tr bgcolor="#fff4e3">
+              <td width="20%" colspan="2"> 15:00 - 15:20 </td>
+              <td width="80%"> <strong> Coffee Break </strong></td>
+            </tr>
+
+            <tr>
+              <td width="20%" rowspan="6">
+                Session 2-B <br />
+                <strong>Chair: Yanming Zhu</strong>
+              </td>
+              <td width="20%"> 15:20 - 15:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                CIIV: A Hybrid Framework for Real Time Container Image Integrity Verification<br />
+                <em>Byoungchan Kim, Sejin Park</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 15:40 - 16:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Private UAV Mesh Networking for Live Match Video Streaming<br />
+                <em>Prabhu Jyot Singh, Nitiraj Sandu</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 16:00 - 16:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Blockchain Solutions for Pharmaceuticals Supply Chain Integrity: Smart Contracts and RSA-Encrypted NFTs
+                in Action<br />
+                <em>Bang Le, Ngan Nguyen</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 16:20 - 16:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                VESTA-MADDRL: Joint Task Offloading and Service Placement in MEC-Vehicle Networks Based on Improved
+                MADDPG<sup>★</sup><br />
+                <em>Yintong Lu</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 16:40 - 17:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Utility-aware Collaboration Structure Optimization in Federated Learning<sup>★</sup><br />
+                <em>Qiqin Huang</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 17:00 - 17:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Cold-Start Microservice Workload Prediction by Dynamically Annealed Graph-Regularized Matrix
+                Factorization<sup>★</sup><br />
+                <em>Xiaoxuan Luo, Hong Shen, Wei Ke</em>
+              </td>
+            </tr>
+          </table>
+
+          <!-- 3-A 4-A 5-A -->
+          <br />
+          <table width="1100" border="1" cellspacing="0" cellpadding="0" class="program"
+            style="background-color:#eefaff; line-height:40px;">
+            <tr height="60px">
+              <td colspan="3" bgcolor="#ff6c40"
+                style="color:#FFF; font-weight:bold; font-size:18px; line-height:40px;    ">
+                November 23 AEST (Sunday) <br />
+                Conference Venue: ROOM 101
+              </td>
+            </tr>
+
+            <tr>
+              <td width="20%">8:30 - 9:00</td>
+              <td width="80%" colspan="2">Arrival Tea & Coffee</td>
+            </tr>
+
+            <tr>
+              <td width="20%">9:00 - 10:00</td>
+              <td width="80%" colspan="2" align="center" style=" line-height:40px; text-align:left; padding-left:30px;">
+                <strong>
+                  Keynote Speaker: Dr Michael Sheng</strong> <br />
+                AIoT: The History, A Decade-Long Research Program, and The Future Directions
+              </td>
+            </tr>
+
+            <tr bgcolor="#fff4e3">
+              <td width="20%">10:00 - 10:20</td>
+              <td width="80%" colspan="2"> <strong>Coffee Break</strong></td>
+            </tr>
+
+
+            <tr>
+              <td width="20%" rowspan="5">
+                Session 3-A <br />
+                <strong>Chair: Yufeng Lin </strong>
+              </td>
+              <td width="20%"> 10:20 - 10:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                Design of a Blockchain Plugin for Secure Electronic Medical Records<br />
+                <em>Zhenglin Wang, Umair Ullah Tariq, MD Mamunur Rashid, Yufeng Lin, Steven Gordon, Fariza Sabrina,
+                  Salahuddin Azad</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 10:40 - 11:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Enhancing Intellectual Property Rights Management Through Blockchain and RSA-Encrypted NFTs<br />
+                <em>Bang Le, Ngan Nguyen</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 11:00 - 11:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                AgnosL2: Adaptive Layer 2 Framework for Heterogeneous Blockchain Ecosystems<br />
+                <em>Zhongli Dong, Young Choon Lee, Albert Y. Zomaya</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 11:20 - 11:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Adaptive AI for Power-Efficient IoT in Smart Agriculture<sup>★</sup><br />
+                <em>Praveen Kumar Sayani</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 11:40 - 12:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Data-Transfer-Aware Microservice Deployment for Edge Computing<sup>★</sup><br />
+                <em>Man Hou Lok, Hong Shen, Yingpeng Sang</em>
+              </td>
+            </tr>
+
+
+            <tr bgcolor="#fff4e3">
+              <td width="20%" colspan="2"> 12:00 - 13:00 </td>
+              <td width="80%"> <strong> Lunch </strong></td>
+            </tr>
+            <tr>
+              <td width="20%" rowspan="6">
+                Session 4-A <br />
+                <strong>Chair: Ye Tao</strong>
+              </td>
+
+              <td width="20%"> 13:00 - 13:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                Energy-Aware Optimization of CFD Workloads in HPC via Machine Learning-Based Dynamic CPU Scaling <br />
+                <em>Imad kissami, Fahd Kalloubi</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 13:20 - 13:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Enhancing Intellectual Property Rights Management through Blockchain Technology, Smart Contracts, and
+                IPFS: An Integrative Approach
+                <br />
+                <em>Bang Le, Ngan Nguyen</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 13:40 - 14:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Scalable Approximate Nearest Neighbor Search with PCA-Augmented HNSW in Vector Databases
+                <br />
+                <em>Yuanpeng Wang, Mohammadreza Hoseinyfarahabady, Albert Y. Zomaya</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:00 - 14:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Enhance Privacy Protection by Reducing Information Exchanges in Multi-Agent System Consensus<sup>★</sup>
+                <br />
+                <em>Sheng Tian, Hong Shen, Wei Ke</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:20 - 14:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Blockchain-Assisted Lightweight Secure Aggregation in Federated Learning via Trust Aware Client
+                Selection<sup>★</sup> <br />
+                <em>Su Liu, Hong Shen, Eddie K. L. Law, Chan Tong Lam</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:40 - 15:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Robust Aggregation on Federated Distillation in Adversarial Environments via Entropy and Semantic-Aware
+                Logit Filtering<sup>★</sup><br />
+                <em>Xiao Ma, Hong Shen, Wei Ke, Wenqi Lyu</em>
+              </td>
+            </tr>
+            <tr bgcolor="#fff4e3">
+              <td width="20%" colspan="2"> 15:20 - 16:00 </td>
+              <td width="80%"> <strong> Coffee Break </strong></td>
+            </tr>
+
+            <tr bgcolor="#f7b267">
+              <td width="20%" colspan="2"> 17:30 - 22:00 </td>
+              <td width="80%"> <strong> Banquet </strong></td>
+            </tr>
+
+          </table>
+
+          <!-- 3-B 4-B 5-B 6-B -->
+          <br />
+          <table width="1100" border="1" cellspacing="0" cellpadding="0" class="program"
+            style="background-color:#eefaff; line-height:40px;">
+            <tr height="60px">
+              <td colspan="3" bgcolor="#ff6c40"
+                style="color:#FFF; font-weight:bold; font-size:18px; line-height:40px;    ">
+                November 23 AEST (Sunday) <br />
+                Conference Venue: ROOM 102
+              </td>
+            </tr>
+
+            <tr>
+              <td width="20%" rowspan="5">
+                Session 3-B <br />
+                <strong>Chair: Yuanpeng Wang </strong>
+              </td>
+              <td width="20%"> 10:20 - 10:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                Real-Time Detection of Injection Attacks in Industrial Multi-Agent Systems<br />
+                <em>Qi Yu, Kai Di, Chengge Duan, Xinwei Xue, Pan Li</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 10:40 - 11:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Quantum Multicast Communication in Mesh-of-Trees Networks: A Teleportation-Based Approach<br />
+                <em>Ye Tao, Hong Shen, Fariza Sabrina, Steven Gordon, Fabio Serpiello</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 11:00 - 11:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Efficient Computation of TDM Disjoint Paths in Networks<br />
+                <em>Zhipeng Liu, Longkun Guo, Jiawei Lin</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 11:20 - 11:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Adversarial Assembly: Leveraging LLMs to Evade CNN-Based Windows Malware Detection<sup>★</sup><br />
+                <em>Md Mashrur Arifin, Brodie Abrew, Devyn Hubbs, Jyh-haw Yeh</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 11:40 - 12:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                PDP-RAG: Privacy-Preserving Retrieval-Augmented Generation Based on Personalized Differential
+                Privacy<sup>★</sup><br />
+                <em>Yufu Chen, Yingpeng Sang</em>
+              </td>
+            </tr>
+
+
+            <tr bgcolor="#fff4e3">
+              <td width="20%" colspan="2"> 12:00 - 13:00 </td>
+              <td width="80%"> <strong> Lunch </strong></td>
+            </tr>
+
+
+            <tr>
+              <td width="20%" rowspan="7">
+                Session 4-B <br />
+                <strong>Chair: Xuefei Yin</strong>
+              </td>
+              <td width="20%"> 13:00 - 13:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                MethaneSegNet: Methane Plume Segmentation via Multi-Scale SwinTransformer-Based Network<br />
+                <em>Thi Hao Nguyen, Tran Dung Pham, Anh Tuan Nguyen, Chang Gyoon Lim, Seungbum Kim, Hoseop Lee, Jun
+                  Jo</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 13:20 - 13:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Noise-Resilient Small Object Detection with Octave and Cross-Frequency Convolution<br />
+                <em>Timothy Jo, Thi Hao Nguyen, Dong Duc Anh Nguyen, Anh Tuan Nguyen, Yongsik Chun, Jun Jo</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 13:40 - 14:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Radar Signal Recognition Based on DAVG-GRN Network<sup>★</sup><br />
+                <em>Zeyu Tang, Hong Shen, Chan Tong Lam</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:00 - 14:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                MIFNet: Mamba-based Information Fusion Network for Remote Sensing Change Detection<sup>★</sup><br />
+                <em>Yichen Cui, Hong Shen , Chan Tong Lam</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:20 - 14:40 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Pyramid Mamba with Multi-Directional Scanning for Light Field Image Super-Resolution<sup>★</sup><br />
+                <em>Wenqi Lyu, Wei Ke, Hao Sheng, Xiao Ma</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 14:40 - 15:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                Dual-Scale Motion Extraction for Enhanced Human Action Recognition Based on RGB and Skeleton
+                Modalities<sup>★</sup><br />
+                <em>Ke Xu, Hong Shen, Chan Tong Lam</em>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%"> 15:00 - 15:20 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px;">
+                An Approach to Enhance Image Recognition Using Improved Triplet-Loss and Reinforcement Learning and
+                Active Learning<sup>★</sup><br />
+                <em>Anh Khoa Ha, Ngoc Vu Nguyen, Trung Ky Nguyen, Long Van Ho, Tu Nga Ly, Senerath Jayatilake, Tran Dung
+                  Pham</em>
+              </td>
+            </tr>
+            <tr bgcolor="#fff4e3">
+              <td width="20%" colspan="2"> 15:20 - 16:00 </td>
+              <td width="80%"> <strong> Coffee Break </strong></td>
+            </tr>
+
+            <tr bgcolor="#f7b267">
+              <td width="20%" colspan="2"> 17:30 - 22:00 </td>
+              <td width="80%"> <strong> Banquet </strong></td>
+            </tr>
+          </table>
+
+          <!-- Closing -->
+          <br />
+          <table width="1100" border="1" cellspacing="0" cellpadding="0" class="program"
+            style="background-color:#eefaff; line-height:40px;">
+            <tr height="60px">
+              <td colspan="3" bgcolor="#ff6c40"
+                style="color:#FFF; font-weight:bold; font-size:18px;  line-height:40px;">
+                November 24 AEST (Monday) <br />
+                Griffith Tour Visit and Collaboration Discussion
+              </td>
+            </tr>
+
+            <tr>
+              <td width="20%"> 10:00 </td>
+              <td width="80%" style="line-height:30px; padding:10px 20px; ">
+                Arriving at Griffith University
+              </td>
+            </tr>
+
+            <tr>
+              <td width="20%"> 10:00-10:30 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                Griffith Programs Introduction<br />
+              </td>
+            </tr>
+
+            <tr bgcolor="#fff4e3">
+              <td width="20%"> 10:30-11:30 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                Morning Tea
+              </td>
+            </tr>
+
+            <tr>
+              <td width="20%"> 11:30-12:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                Guided Tour at Griffith
+              </td>
+            </tr>
+
+            <tr>
+              <td width="20%"> 12:00 </td>
+              <td width="60%" style="line-height:30px; padding:10px 20px; ">
+                Conclude
+              </td>
+            </tr>
+
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../js/creative.min.js"></script>
+
+
+
+  <script>
+    fetch("my_navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link[data-page]").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("my_footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+</body>
+
+</html>

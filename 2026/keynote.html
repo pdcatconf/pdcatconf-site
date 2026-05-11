@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Minimal bootstrap head to avoid empty-head flash; the full head is appended below -->
+  <meta charset="utf-8">
+  <title>PDCAT 2026</title>
+
+  <!-- Preload partials before we fetch and insert them -->
+  <link rel="preload" href="my_head.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_navbar.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_footer.html" as="fetch" crossorigin>
+
+  <script>
+    // Safely append head partial without wiping existing tags
+    fetch('my_head.html')
+      .then(res => res.text())
+      .then(html => {
+        document.head.insertAdjacentHTML('beforeend', html);
+      })
+      .catch(console.error);
+  </script>
+  <!-- Bootstrap core CSS -->
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Plugin CSS -->
+<link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Custom styles -->
+<link href="../css/creative.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Merriweather:300,400,700,900&display=swap" rel="stylesheet">
+</head>
+
+  <body id="page_top">
+    <div id="navbar-placeholder"></div>
+
+    <header>
+      <div class="title-class">
+        <!-- <h1 class="text-uppercase">
+          <strong>The 20<sup class="text-lowercase">th</sup> International Conference on Parallel and Distributed Computing, Applications and Technologies</strong>
+        </h1>
+        <h1>
+          5-7 December 2019 <br> Gold Coast, Australia
+        </h1> -->
+      </div>
+    </header>  
+
+    <section id="keynote">
+      <div class="container">
+        <div class="speakers">
+
+        <div class="speaker">
+          <aside class="speaker-card">
+            <img class="speaker-photo" src="img/Xu.jpg" alt="Speaker 1">
+            <div class="speaker-name">Dr Cheng-Zhong Xu</div>
+            <div class="speaker-title">Professor</div>
+            <p class="speaker-affil">University of Macau</p>
+            <p class="speaker-affil">Macao SAR, China</p>
+          </aside>
+
+          <main class="speaker-content">
+            <div class="speaker-section">
+              <h2>Title</h2>
+              <h3>Cloud-Edge Computing for Machine Learning and Large Models</h3>
+            </div>
+
+            <div class="speaker-section">
+              <h2>Abstract</h2>
+              <p>The rise of large foundation models and generative AI has introduced unprecedented demands in computing power, particularly for model pre-training and real-time inference. Cloud infrastructure and cloud-edge services play a pivotal role in supporting machine learning development, enabling an optimal balance between training efficiency and inference performance.  In this talk, we will explore key challenges in resource management and model compression for cloud-native data centers tailored to large-scale AI models. We will present recent research advances that enhance the efficiency of large model deployment and discuss their implications for real-world AI applications. Finally, we will also share insights on the future evolution of large model operating systems and their role in advancing AI infrastructure.
+              </p>
+            </div>
+
+            <div class="speaker-section">
+              <h2>Bio</h2>
+              <p>Dr. Cheng-Zhong Xu is a Chair Professor of Computer Science and the Dean of the Faculty of Science and Technology, University of Macau. He served as Chief Scientist for key national projects on “Internet of Things for Smart City” (Ministry of Science and Technology of China) and “Intelligent Driving” (Macau SAR, China). He was also Director of Institute of Advanced Computing and Digital Engineering at the Shenzhen Institutes of Advanced Technology (SIAT), Chinese Academy of Sciences. Before these roles, he spent over 18 years as a faculty member at Wayne State University, USA. Dr. Xu's research focuses on parallel and distributed systems, cloud computing, intelligent driving and smart city applications. He has published over 600 papers and held more than 150 patents. His work has garnered over 23000 citations and has been cited in 340+ international patents, including 240 U.S. patents. Dr. Xu chaired IEEE Technical Committee of Distributed Processing from 2014 to 2020. He earned his B.S. and M.S. in Computer Science from Nanjing University and his Ph.D. from the University of Hong Kong in 1993. He is an IEEE fellow, due to contributions in resource management in parallel and distributed systems.
+                </p>
+            </div>
+          </main>
+        </div>
+
+          
+        <div class="speaker">
+          <aside class="speaker-card">
+            <img class="speaker-photo" src="img/Sheng-2022-4.jpg" alt="Speaker 1">
+            <div class="speaker-name">Dr Michael Sheng</div>
+            <div class="speaker-title">Professor</div>
+            <p class="speaker-affil">Macquarie University</p>
+            <p class="speaker-affil">Sydney, Australia</p>
+          </aside>
+
+          <main class="speaker-content">
+            <div class="speaker-section">
+              <h2>Title</h2>
+              <h3>AIoT: The History, A Decade-Long Research Program, and The Future Directions</h3>
+            </div>
+
+            <div class="speaker-section">
+              <h2>Abstract</h2>
+              <p>Through combination of artificial intelligence (AI) technologies and the Internet of Things (IoT), the Artificial Intelligence of Things (AIoT) has emerged as an important research and development area for more efficient business operations, improved human-machine interactions, and enhanced data analytics and decision making. In this talk, I will give a brief overview on the history of AI and IoT, report our research activities for more than a decade dedicated to improving the well being and quality of life of aging population, and discuss several important research directions in this research area.
+
+              </p>
+            </div>
+
+            <div class="speaker-section">
+              <h2>Bio</h2>
+              <p>Dr Michael Sheng is a Distinguished Professor and Head of School of Computing at Macquarie University, Sydney, Australia. Distinguished Professor Michael Sheng completed his PhD in Computer Science from UNSW Sydney. He is an internationally recognized computer scientist for his work on advancing Web technologies. His main research areas include services computing, the Internet of Things (IoT), machine learning, and big data analytics. He is best known for his work on Web service composition, a key technical driver for the modern Web-based software industry, and on efficient management of the future Web when billions of IoT objects will be connected to the Internet. His research publications have received 28,012 citations with an H-index of 76, according to Google Scholar as of 03/09/2026, with a strong growth trajectory over recent years. The quality and impact of his work has been recognized through receiving the Chris Wallace Award for Outstanding Research Contribution in 2012, a prestigious award given to only one computer scientist each year working in Australian and New Zealand, and by his inclusion in “The Most Influential Scholars in IoT” prepared by AMiner in 2018, in “The Most Impactful Authors in Services Computing” (ranked top 5 worldwide), prepared by Microsoft Academic in 2021, in “The Highly Ranked Scholar Lifetime in Web Information System” (ranked top 5 worldwide), prepared by ScholarGPS in 2026.
+
+                His research reputation has attracted many significant appointments from institutes and organizations, as well as invitations to deliver keynote addresses at more than 30 international conferences and events. He served as the Vice Chair of the Executive Committee of the IEEE Technical Community on Services Computing (IEEE TCSVC, 2022-2024) and has served on the Technical Advisory Board of the Internet of Things Committee of Australian Computer Society, the peak body for Australia's ICT sector since 2019.
+                </p>
+            </div>
+          </main>
+        </div>
+
+        
+        <div class="speaker">
+          <aside class="speaker-card">
+            <img class="speaker-photo" src="img/Lim.jpg" alt="Speaker 1">
+            <div class="speaker-name">Dr Chee Peng Lim</div>
+            <div class="speaker-title">Professor</div>
+            <p class="speaker-affil">Swinburne University of Technology</p>
+            <p class="speaker-affil">Melbourne, Australia</p>
+          </aside>
+
+          <main class="speaker-content">
+            <div class="speaker-section">
+              <h2>Title</h2>
+              <h3>Computational Intelligence-based Models for Data Analytics: Architectures, Algorithms, and Applications</h3>
+            </div>
+
+            <div class="speaker-section">
+              <h2>Abstract</h2>
+              <p>Advances in digital technologies and Artificial Intelligence (AI) are transforming industries, reshaping communities, and redefining how we solve complex problems. Among the diverse methodologies of AI, Computational Intelligence (CI), including neural, fuzzy, and evolutionary computing, offers useful models for tackling the dynamic and uncertain nature of real-world environments. This presentation will explore recent advances in CI models for data analytics, focusing on challenges such as achieving incremental learning in rapidly changing environments without catastrophic forgetting, and enhancing the interpretability of model predictions. Practical applications across manufacturing, transportation, and healthcare will be highlighted to illustrate how CI models move from theory into impactful deployment. The presentation will also discuss the broader implications of CI in driving innovation for Industry 4.0 and setting the stage for Industry 5.0 and beyond.
+              </p>
+            </div>
+
+            <div class="speaker-section">
+              <h2>Bio</h2>
+              <p>Chee Peng Lim completed his Ph.D. at the University of Sheffield, UK, in 1997. His research focuses on the design and development of computational intelligence models for data analytics and decision support, with applications in medical prognosis and diagnosis, condition monitoring, and predictive maintenance of industrial systems. He has published over 600 papers and received numerous prestigious fellowships for international collaboration, including the Australia-India Senior Visiting Fellowship (Australian Academy of Science), the Australia-Japan Emerging Research Leaders Exchange Program (Australian Academy of Technological Sciences and Engineering), and the JSPS Research Fellowship at Kyushu University. He has also held a Commonwealth Fellowship at the University of Cambridge, a Fulbright Fellowship at the University of California Berkeley, and participated in the US Office of Naval Research Global Visiting Scientists Program at Harvard University and Stanford University.
+                </p>
+            </div>
+          </main>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/js/creative.min.js"></script>
+
+
+<script>
+    fetch("my_navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link[data-page]").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+</script>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("my_footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  </body>
+
+</html>
