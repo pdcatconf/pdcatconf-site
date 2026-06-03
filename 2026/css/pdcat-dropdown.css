@@ -1,0 +1,62 @@
+.dropdown-submenu{
+    position:relative;
+}
+
+/* 右侧弹出菜单 */
+
+.special-track-menu{
+
+    display:none;
+
+    position:absolute;
+
+    left:100%;
+    top:0;
+
+    min-width:350px;
+
+    background:#fff;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+    z-index:99999;
+}
+
+/* 鼠标移上去显示 */
+
+.dropdown-submenu:hover .special-track-menu{
+    display:block;
+}
+
+/* Track条目 */
+
+.special-track-menu .dropdown-item{
+    display:block;
+    padding:12px 20px;
+    white-space:normal;
+}
+
+/* hover效果 */
+
+.special-track-menu .dropdown-item:hover{
+    background:#f5f5f5;
+}
+
+/* Special Tracks右箭头 */
+
+.special-track{
+    position:relative;
+}
+
+.special-track::after{
+    content:"›";
+    position:absolute;
+    right:15px;
+    font-size:20px;
+    color:#999;
+}
+
+
+

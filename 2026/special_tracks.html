@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Minimal bootstrap head to avoid empty-head flash; the full head is appended below -->
+  <meta charset="utf-8">
+  <title>PDCAT 2026</title>
+<link href="css/pdcat-dropdown.css" rel="stylesheet">
+  <!-- Preload partials before we fetch and insert them -->
+  <link rel="preload" href="my_head.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_navbar.html" as="fetch" crossorigin>
+  <link rel="preload" href="my_footer.html" as="fetch" crossorigin>
+
+  <script>
+    // Safely append head partial without wiping existing tags
+    fetch('my_head.html')
+      .then(res => res.text())
+      .then(html => {
+        document.head.insertAdjacentHTML('beforeend', html);
+      })
+      .catch(console.error);
+  </script>
+  <!-- Bootstrap core CSS -->
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Plugin CSS -->
+<link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- Custom styles -->
+<link href="../css/creative.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Merriweather:300,400,700,900&display=swap" rel="stylesheet">
+
+</head>
+<body id="page_top">
+
+    <div id="navbar-placeholder"></div>
+
+    <header>
+        <div class="title-class"></div>
+    </header>
+
+    <section id="special-tracks" style="padding:100px 0 80px 0;">
+
+        <div class="container">
+
+            <div style="text-align:center;margin-bottom:60px;">
+
+                <h2 style="
+                    font-size:56px;
+                    font-weight:300;
+                    color:#222;
+                    margin-bottom:20px;">
+                    Special Tracks
+                </h2>
+
+                <div style="
+                    width:100px;
+                    height:2px;
+                    background:#333;
+                    margin:auto;">
+                </div>
+
+            </div>
+
+            <div class="track-list">
+
+                <a class="track-item"
+                   href="track1.html">
+                    Track 1: Broad Learning and Intelligent Data Mining
+                </a>
+
+                <a class="track-item"
+                   href="track2.html">
+                    Track 2: Large Model-Driven Data Compression
+                </a>
+
+                <a class="track-item"
+                   href="track3.html">
+                    Track 3: To be Done
+                </a>
+
+                <!-- <a class="track-item"
+                   href="track4.html">
+                    Track 4: Intelligent Computation & Data-Driven Optimization
+                </a>
+
+                <a class="track-item"
+                   href="track5.html">
+                    Track 5: Artificial Intelligence and Software Engineering
+                </a>
+
+                <a class="track-item"
+                   href="track6.html">
+                    Track 6: AI-Driven Service Computing
+                </a>
+
+                <a class="track-item"
+                   href="track7.html">
+                    Track 7: Artificial Intelligence and Knowledge Graphs
+                </a>
+
+                <a class="track-item"
+                   href="track8.html">
+                    Track 8: Artificial Intelligence and Computer Education
+                </a>
+
+                <a class="track-item"
+                   href="track9.html">
+                    Track 9: Intelligent Computation & Large Language Models
+                </a>
+
+                <a class="track-item"
+                   href="track10.html">
+                    Track 10: Embodied Intelligence Drives Industrial Intelligence
+                </a> -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <style>
+
+        .track-list{
+            width:100%;
+        }
+
+        .track-item{
+
+            display:block;
+
+            background:#5f646d;
+
+            color:#fff !important;
+
+            text-align:center;
+
+            font-size:22px;
+
+            font-weight:600;
+
+            text-decoration:none;
+
+            padding:18px 20px;
+
+            margin-bottom:18px;
+
+            border-radius:4px;
+
+            transition:all .25s ease;
+        }
+
+        .track-item:hover{
+
+            background:#f26c3a;
+
+            color:#fff !important;
+
+            text-decoration:none;
+
+            transform:translateY(-2px);
+
+            box-shadow:0 6px 18px rgba(0,0,0,.15);
+        }
+
+    </style>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="../js/creative.min.js"></script>
+
+    <script>
+        fetch("my_navbar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("navbar-placeholder").innerHTML = data;
+
+                const currentPage = window.location.pathname.split("/").pop();
+
+                document.querySelectorAll(".nav-link[data-page]").forEach(link => {
+                    if(link.getAttribute("data-page") === currentPage){
+                        link.classList.add("active");
+                    }
+                });
+            });
+    </script>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("my_footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
