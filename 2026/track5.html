@@ -85,12 +85,13 @@
         .chairs-container {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
+            flex-wrap: nowrap;
+            gap: 20px;
         }
 
         .chair-card {
             width: 220px;
+            flex: 0 0 220px;
             text-align: center;
         }
 
@@ -141,60 +142,72 @@
     <div class="track-container">
 
         <div class="track-header">
-            <h1>Special Track 3</h1>
-            <h2>To be Done.</h2>
+            <h1>Special Track 5</h1>
+            <h2>Performance Optimization , Modeling, and Computing Libraries</h2>
             <div class="divider"></div>
         </div>
-<!-- 
+
         <h3 class="section-heading">Chairs</h3>
 
         <div class="chairs-container">
 
             <div class="chair-card">
-                <img src="img/images.png"
+                <img src="img/tracks/Haipengjia.jpg"
                      class="chair-avatar"
                      alt="Chair 1">
 
-                <div class="chair-name">AAAA</div>
-                <div class="chair-institution">AAAA</div>
+                <div class="chair-name">Haipeng Jia</div>
+                <div class="chair-institution">Institute of Computing Technology, Chinese Academy of Sciences</div>
             </div>
 
             <div class="chair-card">
-                <img src="img/images.png"
+                <img src="img/tracks/Fangli.jpg"
                      class="chair-avatar"
                      alt="Chair 2">
 
-                <div class="chair-name">AAAA</div>
-                <div class="chair-institution">AAAA</div>
+                <div class="chair-name">Fang Li</div>
+                <div class="chair-institution">Jiangnan Institute of<br> Computing Technology</div>
             </div>
 
             <div class="chair-card">
-                <img src="img/images.png"
+                <img src="img/tracks/Shengguoli.jpg"
                      class="chair-avatar"
                      alt="Chair 3">
 
-                <div class="chair-name">AAAA</div>
-                <div class="chair-institution">AAAA</div>
+                <div class="chair-name">Shengguo Li</div>
+                <div class="chair-institution">National University of<br> Defense Technology</div>
+            </div>
+            <div class="chair-card">
+                <img src="img/tracks/Yingjiang.jpg"
+                     class="chair-avatar"
+                     alt="Chair 1">
+
+                <div class="chair-name">Ying Jiang</div>
+                <div class="chair-institution">Sun Yat-sen University</div>
             </div>
 
-        </div> -->
+        </div>
 
-        <!-- <h3 class="section-heading">Introduction</h3>
+        <h3 class="section-heading">Introduction</h3>
 
         <p class="introduction-text">
-            To be Done.
+            The relentless growth in computational demands—from scientific simulations, AI training/inference, and large-scale data analytics—places immense pressure on high-performance computing (HPC) systems, and as architectures evolve toward exascale and beyond, the growing complexity of software stacks, heterogeneous hardware, and diverse workloads makes performance measurement, modeling, and efficient library implementations more critical than ever. This track centers on the three foundational pillars that bridge hardware capabilities and application performance: performance measurement methodologies for deep system-level insight, performance modeling techniques to guide architectural design and optimization, and high-performance libraries—including operator libraries, AI frameworks, and compute kernels—that convert peak theoretical performance into sustained practical throughput. We invite cutting-edge contributions spanning the full spectrum from low-level micro-benchmarking and profiling to high-level prediction, auto-tuning, and domain-specific optimizations, and we welcome researchers and practitioners from academia and industry to share their latest advances in performance engineering for parallel and distributed computing systems.
         </p>
 
-        <h3 class="section-heading">Topics</h3> -->
+        <h3 class="section-heading">Topics</h3>
 
         <ul class="topics-list">
-            <!-- <li>To be Done.</li> -->
+            <li>Performance Modeling, Profiling, and Analysis Methodologies for Heterogeneous HPC Systems</li>
+            <li>High-Performance Operator Libraries and Kernel Optimizations for HPC Systemsg</li>
+            <li>Auto-Tuning and Performance Portability across Diverse Hardware Architectures (CPU, GPU, DPU, FPGA)</li>
+            <li>Performance Measurement and Modeling for Large-Scale AI Training and Inference</li>
+            <li>Performance Visualization, Analytics, and Anomaly Detection in Distributed Systems</li>
             <!-- <li>Broad Learning-Enhanced Knowledge Discovery</li>
             <li>Efficient Data Mining with Lightweight Broad Learning Models</li>
             <li>Trustworthy and Robust Broad Learning for Data Mining</li>
             <li>Cross-Domain Intelligent Data Mining Based on Broad Learning</li> -->
         </ul>
-        <!-- <h3 class="section-heading">Important Date</h3>
+        <h3 class="section-heading">Important Date</h3>
         <p>We are pleased to announce the important dates for PDCAT 2026.
             Please mark your calendars! 
             <br>
@@ -208,8 +221,7 @@
             <li><strong>Camera-Ready Submission Deadline:</strong> 31
               October 2026</li>
             <li><strong>Conference Dates:</strong> 4 – 6 December 2026 (AoE)</li>
-          </ul> -->
-
+          </ul>
     </div>
 
     <!-- Footer -->
