@@ -13,8 +13,9 @@
     left:100%;
     top:0;
 
-    min-width:350px;
+    min-width:750px;
 
+    /* text-align: justify; */
     background:#fff;
 
     border:1px solid #ddd;
@@ -22,6 +23,13 @@
     box-shadow:0 4px 10px rgba(0,0,0,.15);
 
     z-index:99999;
+}
+
+
+.special-track-menu .dropdown-item:hover,
+.dropdown-submenu:hover > .special-track {
+    background-color: #c82333 !important;
+    color: #fff !important;
 }
 
 /* 鼠标移上去显示 */
