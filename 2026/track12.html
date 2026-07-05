@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Special Track 12 | PDCAT 2026</title>
+
+    <!-- Dropdown CSS -->
+    <link href="css/pdcat-dropdown.css" rel="stylesheet">
+
+    <!-- Preload -->
+    <link rel="preload" href="my_head.html" as="fetch" crossorigin>
+    <link rel="preload" href="my_navbar.html" as="fetch" crossorigin>
+    <link rel="preload" href="my_footer.html" as="fetch" crossorigin>
+
+    <!-- Load shared head -->
+    <script>
+        fetch('my_head.html')
+            .then(res => res.text())
+            .then(html => {
+                document.head.insertAdjacentHTML('beforeend', html);
+            })
+            .catch(console.error);
+    </script>
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Theme -->
+    <link href="../css/creative.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Merriweather:300,400,700,900&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        .track-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 140px 20px 80px 20px;
+        }
+
+        .track-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .track-header h1 {
+            font-size: 42px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .track-header h2 {
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            background: #222;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+
+        .chairs-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .chair-card {
+            width: 220px;
+            text-align: center;
+        }
+
+        .chair-avatar {
+            width: 150px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            background: #e9e9e9;
+            margin-bottom: 15px;
+        }
+
+        .chair-name {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .chair-institution {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .introduction-text {
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .topics-list {
+            padding-left: 25px;
+        }
+
+        .topics-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+    </style>
+
+</head>
+
+<body id="page_top">
+
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <div class="track-container">
+
+        <div class="track-header">
+            <h1>Special Track 12</h1>
+            <h2>Near-Data Computing and Edge Storage Systems:<br>Architectures and In-Situ Processing</h2>
+            <div class="divider"></div>
+        </div>
+
+        <h3 class="section-heading">Chairs</h3>
+
+        <div class="chairs-container">
+
+            <div class="chair-card">
+                <img src="img/tracks/Huisun.png"
+                     class="chair-avatar"
+                     alt="Chair 1">
+
+                <div class="chair-name">Hui Sun</div>
+                <div class="chair-institution">Anhui University</div>
+            </div>
+
+            <div class="chair-card">
+                <img src="img/tracks/Xiaohuipeng.png"
+                     class="chair-avatar"
+                     alt="Chair 2">
+
+                <div class="chair-name">Xiaohui Peng</div>
+                <div class="chair-institution">Institute of Computing Technology, <br>Chinese Academy of Sciences</div>
+            </div>
+
+
+        </div>
+
+        <h3 class="section-heading">Introduction</h3>
+
+        <p class="introduction-text">
+The rapid growth of data-intensive applications has reshaped parallel and distributed computing. Traditional cloud-centric models are increasingly inadequate for latency‑sensitive and bandwidth‑constrained edge environments, where massive data streams must be processed and stored close to their origin. This track explores the convergence of near‑data processing (NDP) and edge storage systems that tackle the data movement bottleneck. NDP reduces costly data transfers by bringing computation closer to storage, while computational storage enables in‑situ analytics on storage media. Edge storage provides essential caching, tiering, and persistence for low‑latency applications, and supports computation‑in‑storage for AI inference and real‑time analytics.</p>
+        <p class="introduction-text">In this domain, there are several critical challenges. How should data placement and replication be optimized across heterogeneous edge‑cloud continuums, considering dynamic network conditions and device heterogeneity? How can we enable efficient near‑memory/storage computation for diverse data-intensive workloads, ranging from lightweight AI models to complex stream processing? Furthermore, how can computation and storage be coordinated within a unified framework to overcome the “storage wall” that limits performance in edge AI systems?</p>
+        <p class="introduction-text">In this track, we invite cutting‑edge advances, architectural innovations, and practical implementations that address these challenges. We solicit contributions that span from device‑level storage designs to distributed edge fabrics, and from data placement algorithms to in‑situ processing frameworks. This track aims to advance data‑centric computing framework and pave the way for next‑generation intelligent infrastructures.</p>
+
+        <h3 class="section-heading">Topics</h3>
+
+        <ul class="topics-list">
+            <li>Near-Data Processing (NDP) Architectures for Edge Computing</li>
+            <li>Computational Storage Devices and In-Situ Computation</li>
+            <li>Edge Storage Systems: Architectures, Caching, and Tiered Data Management</li>
+            <li>Data Placement and Storage-Aware Task Scheduling in Edge-Cloud Continuums</li>
+            <li>Energy-Efficient Co-Design of Storage and Computation for Edge Devices</li>
+        </ul>
+        <h3 class="section-heading">Important Date</h3>
+        <p>We are pleased to announce the important dates for PDCAT 2026.
+            Please mark your calendars! 
+            <br>
+            <em>All deadlines are based on Anywhere on Earth (AoE), at midnight on the specified date.</em>
+          </p>
+
+          <ul>
+            <li><strong>Paper Submission Deadline:</strong>31 August 2026 (AoE)</li>
+            <li><strong>Notification of Acceptance:</strong> 10 October
+              2026</li>
+            <li><strong>Camera-Ready Submission Deadline:</strong> 31
+              October 2026</li>
+            <li><strong>Conference Dates:</strong> 4 – 6 December 2026</li>
+          </ul>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JS -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <script src="../js/creative.min.js"></script>
+
+    <!-- Navbar -->
+    <script>
+        fetch("my_navbar.html")
+            .then(res => res.text())
+            .then(data => {
+
+                document.getElementById(
+                    "navbar-placeholder"
+                ).innerHTML = data;
+
+                const currentPage =
+                    window.location.pathname.split("/").pop();
+
+                document
+                    .querySelectorAll(".nav-link[data-page]")
+                    .forEach(link => {
+
+                        if (
+                            link.getAttribute("data-page")
+                            === currentPage
+                        ) {
+                            link.classList.add("active");
+                        }
+
+                    });
+            });
+    </script>
+
+    <!-- Footer -->
+    <script>
+        fetch("my_footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById(
+                    "footer-placeholder"
+                ).innerHTML = data;
+            });
+    </script>
+
+    <!-- CFP Dropdown -->
+    <script src="js/pdcat-dropdown.js"></script>
+
+</body>
+
+</html>
