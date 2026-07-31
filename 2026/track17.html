@@ -85,12 +85,13 @@
         .chairs-container {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
+            flex-wrap: nowrap;
+            gap: 20px;
         }
 
         .chair-card {
             width: 220px;
+            flex: 0 0 220px;
             text-align: center;
         }
 
@@ -129,7 +130,6 @@
         }
 
     </style>
-
 </head>
 
 <body id="page_top">
@@ -175,7 +175,14 @@
                 <div class="chair-name">Peng Liu</div>
                 <div class="chair-institution">Guangdong University of Technology</div>
             </div>
+            <div class="chair-card">
+                <img src="img/tracks/Junyan Hu.jpg"
+                     class="chair-avatar"
+                     alt="Chair 4">
 
+                <div class="chair-name">Junyan Hu</div>
+                <div class="chair-institution">Xi'an University of Posts and Telecommunications‌</div>
+            </div>
 
         </div>
 
