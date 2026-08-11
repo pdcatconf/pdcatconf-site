@@ -46,6 +46,9 @@
     white-space:normal;
 }
 
+.journal-list {
+  list-style-type: none;
+}
 
 
 .special-track-menu .dropdown-item:hover{
