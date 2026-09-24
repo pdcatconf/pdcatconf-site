@@ -1,29 +1,60 @@
+.important-dates-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.track-container .important-dates-scroll {
+  max-width: calc(100vw - 40px);
+}
+
 .important-dates-table {
   width: 100%;
+  min-width: 820px;
   table-layout: fixed;
-  margin-bottom: 1rem;
-  text-align: left;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .important-dates-table th,
 .important-dates-table td {
-  padding: 0.85rem;
+  padding: 0.85rem 0.65rem;
+  text-align: center;
   vertical-align: middle;
-  overflow-wrap: break-word;
+}
+
+.important-dates-table td {
+  white-space: nowrap;
+}
+
+.important-dates-table del {
+  margin-right: 0.4rem;
 }
 
 .important-dates-table thead th {
   background-color: #f5f5f5;
 }
 
-.important-dates-table th:first-child {
-  width: 40%;
+.important-dates-table thead th:first-child {
+  width: 24%;
+}
+
+.important-dates-table thead th:nth-child(2) {
+  width: 50%;
+}
+
+.important-dates-table thead th:nth-child(3) {
+  width: 26%;
 }
 
 @media (max-width: 575px) {
+  .important-dates-table {
+    min-width: 740px;
+  }
+
   .important-dates-table th,
   .important-dates-table td {
-    padding: 0.5rem;
+    padding: 0.65rem 0.5rem;
     font-size: 14px;
   }
 }
