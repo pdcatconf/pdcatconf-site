@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Form | PDCAT 2026</title>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/creative.css" rel="stylesheet">
+  <link href="css/pdcat-dropdown.css" rel="stylesheet">
+  <style>
+    main { padding: 6rem 0 2rem; }
+    fieldset { min-width: 0; }
+    legend { font-size: 1.3rem; font-weight: 600; }
+    .form-section { padding: 1.25rem; border: 1px solid #dee2e6; border-radius: 8px; margin-bottom: 1.5rem; }
+    label { font-weight: 600; }
+    input[type="file"] { max-width: 100%; }
+    .registration-links { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+    .registration-links a { padding: .75rem 1rem; border: 1px solid #d4dfe7; border-radius: 6px; }
+    .query-section { margin-top: 3rem; padding: 1.5rem; background: #f5f8fb; border: 1px solid #d4dfe7; border-radius: 8px; scroll-margin-top: 6rem; }
+    .result-row { display: grid; grid-template-columns: minmax(130px, 35%) 1fr; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid #d4dfe7; overflow-wrap: anywhere; white-space: pre-wrap; }
+    .query-code { overflow-wrap: anywhere; user-select: all; }
+    #form-status, #query-status { white-space: pre-wrap; }
+    #submission-result { scroll-margin-top: 6rem; }
+    [hidden] { display: none !important; }
+    @media (max-width: 575px) { .result-row { grid-template-columns: 1fr; gap: .25rem; } }
+  </style>
+  <script>
+    fetch('my_head.html').then(res => res.text()).then(html => {
+      document.head.insertAdjacentHTML('beforeend', html);
+      document.title = 'Registration Form | PDCAT 2026';
+    }).catch(console.error);
+  </script>
+</head>
+<body id="page_top">
+  <div id="navbar-placeholder"></div>
+  <main class="container">
+    <h1 class="section-heading">Registration Form</h1>
+    <p><a href="register.html">← Registration fees and payment instructions</a></p>
+    <div class="alert alert-info">Submit your registration details and payment screenshot. Payment remains pending until verified by the organizers. Check payment status on the separate query page using your registration email.</div>
+    <p>Fields marked * are required. The payment amount is calculated from your country or region, registration category and extra pages.</p>
+    <noscript><p class="alert alert-warning">Please enable JavaScript to submit this form.</p></noscript>
+    <form id="registration-form" enctype="multipart/form-data">
+      <fieldset id="registration-fields" disabled>
+        <section class="form-section"><h2>Participant</h2>
+          <div class="form-group"><label for="full-name">Full name *</label><input class="form-control" id="full-name" name="full_name" autocomplete="name" maxlength="150" required></div>
+          <div class="form-group"><label for="email">Email *</label><input class="form-control" type="email" id="email" name="email" autocomplete="email" maxlength="254" required></div>
+          <div class="form-group"><label for="affiliation">Affiliation *</label><input class="form-control" id="affiliation" name="affiliation" autocomplete="organization" maxlength="250" required></div>
+          <div class="form-group"><label for="country">Country or region *</label><select class="form-control" id="country" name="country_region" autocomplete="country" required><option value="" disabled selected hidden>Select your country or region</option><option value="CN">China</option>
+<option value="HK">China (Hong Kong)</option>
+<option value="MO">China (Macao)</option>
+<option value="TW">China (Taiwan)</option>
+<option value="AF">Afghanistan</option>
+<option value="AX">Åland Islands</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AQ">Antarctica</option>
+<option value="AG">Antigua &amp; Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BS">Bahamas</option>
+<option value="BH">Bahrain</option>
+<option value="BD">Bangladesh</option>
+<option value="BB">Barbados</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BO">Bolivia</option>
+<option value="BA">Bosnia &amp; Herzegovina</option>
+<option value="BW">Botswana</option>
+<option value="BV">Bouvet Island</option>
+<option value="BR">Brazil</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="VG">British Virgin Islands</option>
+<option value="BN">Brunei</option>
+<option value="BG">Bulgaria</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CV">Cape Verde</option>
+<option value="BQ">Caribbean Netherlands</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CL">Chile</option>
+<option value="CX">Christmas Island</option>
+<option value="CC">Cocos (Keeling) Islands</option>
+<option value="CO">Colombia</option>
+<option value="KM">Comoros</option>
+<option value="CG">Congo - Brazzaville</option>
+<option value="CD">Congo - Kinshasa</option>
+<option value="CK">Cook Islands</option>
+<option value="CR">Costa Rica</option>
+<option value="CI">Côte d’Ivoire</option>
+<option value="HR">Croatia</option>
+<option value="CU">Cuba</option>
+<option value="CW">Curaçao</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czechia</option>
+<option value="DK">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EE">Estonia</option>
+<option value="SZ">Eswatini</option>
+<option value="ET">Ethiopia</option>
+<option value="FK">Falkland Islands</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="GF">French Guiana</option>
+<option value="PF">French Polynesia</option>
+<option value="TF">French Southern Territories</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="DE">Germany</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GP">Guadeloupe</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GG">Guernsey</option>
+<option value="GN">Guinea</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HM">Heard &amp; McDonald Islands</option>
+<option value="HN">Honduras</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IR">Iran</option>
+<option value="IQ">Iraq</option>
+<option value="IE">Ireland</option>
+<option value="IM">Isle of Man</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JE">Jersey</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Laos</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LS">Lesotho</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libya</option>
+<option value="LI">Liechtenstein</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MG">Madagascar</option>
+<option value="MW">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="MH">Marshall Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="YT">Mayotte</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia</option>
+<option value="MD">Moldova</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="ME">Montenegro</option>
+<option value="MS">Montserrat</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar (Burma)</option>
+<option value="NA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NU">Niue</option>
+<option value="NF">Norfolk Island</option>
+<option value="KP">North Korea</option>
+<option value="MK">North Macedonia</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+<option value="PK">Pakistan</option>
+<option value="PW">Palau</option>
+<option value="PS">Palestinian Territories</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PN">Pitcairn Islands</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="RE">Réunion</option>
+<option value="RO">Romania</option>
+<option value="RU">Russia</option>
+<option value="RW">Rwanda</option>
+<option value="WS">Samoa</option>
+<option value="SM">San Marino</option>
+<option value="ST">São Tomé &amp; Príncipe</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="RS">Serbia</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SX">Sint Maarten</option>
+<option value="SK">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="SB">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="GS">South Georgia &amp; South Sandwich Islands</option>
+<option value="KR">South Korea</option>
+<option value="SS">South Sudan</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="BL">St. Barthélemy</option>
+<option value="SH">St. Helena</option>
+<option value="KN">St. Kitts &amp; Nevis</option>
+<option value="LC">St. Lucia</option>
+<option value="MF">St. Martin</option>
+<option value="PM">St. Pierre &amp; Miquelon</option>
+<option value="VC">St. Vincent &amp; Grenadines</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SJ">Svalbard &amp; Jan Mayen</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syria</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania</option>
+<option value="TH">Thailand</option>
+<option value="TL">Timor-Leste</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad &amp; Tobago</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Türkiye</option>
+<option value="TM">Turkmenistan</option>
+<option value="TC">Turks &amp; Caicos Islands</option>
+<option value="TV">Tuvalu</option>
+<option value="UM">U.S. Outlying Islands</option>
+<option value="VI">U.S. Virgin Islands</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option value="GB">United Kingdom</option>
+<option value="US">United States</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VA">Vatican City</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Vietnam</option>
+<option value="WF">Wallis &amp; Futuna</option>
+<option value="EH">Western Sahara</option>
+<option value="YE">Yemen</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option></select></div>
+          <div class="form-group"><label for="phone">Phone</label><input class="form-control" type="tel" id="phone" name="phone" autocomplete="tel" maxlength="50"></div>
+        </section>
+        <section class="form-section"><h2>Registration</h2>
+          <div class="form-group"><label for="attendance-mode">Attendance mode *</label><select class="form-control" id="attendance-mode" name="attendance_mode" required><option value="" disabled selected hidden>Select an attendance mode</option><option value="online">Oral (Online)</option><option value="onsite">Oral(In-Person)</option><option value="poster">Poster</option></select></div>
+          <div class="form-group"><label for="category">Registration category *</label><select class="form-control" id="category" name="category" required><option value="" disabled selected hidden>Select a registration category</option><option value="author">Author</option><option value="attendee">Attendee</option></select></div>
+          <p id="paper-help">Authors must provide a paper ID and title. The author fee includes 14 pages.</p>
+          <div class="form-group"><label for="paper-id">Paper ID (required for authors)</label><input class="form-control" id="paper-id" name="paper_id" maxlength="100" aria-describedby="paper-help"></div>
+          <div class="form-group"><label for="paper-title">Paper title (required for authors)</label><input class="form-control" id="paper-title" name="paper_title" maxlength="500" aria-describedby="paper-help"></div>
+          <div class="form-group"><label for="extra-pages">Extra pages</label><input class="form-control" type="number" id="extra-pages" name="extra_pages" min="0" max="999999" step="1" value="0" aria-describedby="extra-pages-help"><small id="extra-pages-help" class="form-text text-muted">RMB 1000 or USD 150 per page beyond 14 pages.</small></div>
+        </section>
+        <section class="form-section"><h2>Payment</h2>
+          <div class="form-group"><label for="currency">Payment currency</label><input class="form-control" id="currency" readonly aria-describedby="amount-help"></div>
+          <div class="form-group"><label for="amount">Payment amount (automatically calculated)</label><input class="form-control" id="amount" readonly aria-describedby="amount-help"><small id="amount-help" class="form-text text-muted">Select your country or region and category. China, China (Hong Kong), China (Macao) and China (Taiwan) use RMB; all other countries and regions use USD. The server verifies the amount. Payment is confirmed only after review of your screenshot.</small></div>
+          <div class="form-group"><label for="payment-method">Payment method *</label><select class="form-control" id="payment-method" name="payment_method" required><option value="" disabled selected hidden>Select a payment method</option><option value="domestic_transfer">Domestic bank transfer (RMB)</option><option value="qr">Payment QR code (RMB)</option><option value="cross_border">Cross-border bank transfer (RMB / USD)</option></select></div>
+          <div class="form-group"><label for="payer">Payer name or organization *</label><input class="form-control" id="payer" name="payer" maxlength="250" required></div>
+          <div class="form-group"><label for="payment-date">Payment date *</label><input class="form-control" type="text" id="payment-date" name="payment_date" placeholder="YYYY-MM-DD" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" maxlength="10" required></div>
+          <div class="form-group"><label for="transaction-reference">Transaction reference or transfer note</label><input class="form-control" id="transaction-reference" name="transaction_reference" maxlength="250"></div>
+          <div class="form-group"><label for="receipt">Payment screenshot *</label><input class="sr-only" type="file" id="receipt" name="receipt" accept=".jpg,.jpeg,.png" aria-describedby="receipt-help" required><label for="receipt" class="btn btn-primary">Choose screenshot</label><span id="receipt-filename" aria-live="polite" style="display:block;overflow-wrap:anywhere">No file selected</span><small class="form-text text-muted" id="receipt-help">A JPG or PNG payment screenshot is required, up to 10 MB. Selecting a file does not upload it.</small></div>
+        </section>
+        <section class="form-section"><h2>Invoice details and notes (optional)</h2>
+          <div class="form-group"><label for="invoice-title">Invoice title</label><input class="form-control" id="invoice-title" name="invoice_title" maxlength="250"></div>
+          <div class="form-group"><label for="tax-id">Tax ID</label><input class="form-control" id="tax-id" name="tax_id" maxlength="100"></div>
+          <div class="form-group"><label for="notes">Notes</label><textarea class="form-control" id="notes" name="notes" rows="3" maxlength="2000"></textarea></div>
+        </section>
+        <div class="form-section"><p id="privacy-notice">Your details and payment screenshot are sent to the PDCAT registration server for registration, payment verification and invoicing. Anyone who knows your registration email can look up payment status and amounts. Other details and screenshots are restricted to authorized organizers. For corrections, contact the organizers using the registration instructions page.</p><label><input type="checkbox" name="consent" value="yes" required aria-describedby="privacy-notice"> I agree to this use of my information. *</label></div>
+        <button class="btn btn-primary" type="submit">Submit registration</button>
+      </fieldset><p id="form-status" role="status" class="mt-3" aria-live="polite"></p>
+    </form>
+    <section id="submission-result" class="alert alert-success" hidden aria-labelledby="saved-title"><h2 id="saved-title">Submission received</h2><p>Payment awaits review. Save this confirmation receipt before leaving this page.</p><p><strong>Registration ID: </strong><span id="saved-id"></span></p><button type="button" id="save-confirmation" class="btn btn-primary">Save confirmation receipt</button> <button type="button" id="new-registration" class="btn btn-outline-secondary">Start another registration</button></section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch('my_navbar.html').then(res => res.text()).then(html => {
+      document.getElementById('navbar-placeholder').innerHTML = html;
+      document.querySelector('.nav-link[data-page="register.html"]').classList.add('active');
+    }).catch(console.error);
+    fetch('my_footer.html').then(res => res.text()).then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    }).catch(console.error);
+  </script>
+  <script src="js/pdcat-dropdown.js"></script>
+  <script src="js/registration-form.js?v=20261027-fees"></script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
   <!-- Minimal bootstrap head to avoid empty-head flash; the full head is appended below -->
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDCAT 2026</title>
 <link href="css/pdcat-dropdown.css" rel="stylesheet">
   <!-- Preload partials before we fetch and insert them -->
@@ -30,6 +31,17 @@
 
 <!-- Custom styles -->
 <link href="../css/creative.css" rel="stylesheet">
+<style>
+  #register { padding-top: 6rem; }
+  #register h3 { margin-top: 1.5rem; }
+  #register h4 { font-size: 1.2rem; }
+  #register .bank-details { overflow-wrap: anywhere; }
+  #register .bank-details dt { margin-top: .65rem; }
+  #register .bank-details dd { margin-bottom: .25rem; }
+  #register .qr-image { display: block; width: 260px; max-width: 100%; height: auto; margin: 1rem auto; }
+  #register .payment-panel { padding: 1.25rem; border: 1px solid #dee2e6; border-radius: 8px; margin-bottom: 1rem; }
+  #register [id] { scroll-margin-top: 6rem; }
+</style>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Merriweather:300,400,700,900&display=swap" rel="stylesheet">
 </head>
 
@@ -37,27 +49,19 @@
     <div id="navbar-placeholder"></div>
    
 
-    <header>
-      <div class="title-class">
-        <!-- <h1 class="text-uppercase">
-          <strong>The 20<sup class="text-lowercase">th</sup> International Conference on Parallel and Distributed Computing, Applications and Technologies</strong>
-        </h1>
-        <h1>
-          5-7 December 2019 <br> Gold Coast, Australia
-        </h1> -->
-        <!-- <p>
-        Registration for PDCAT 2026 is not yet open.
-        </p> -->
-      </div>
-    </header>  
-
     <section id="register">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <h2 class="section-heading">Registration</h2>
               <div> 
-                  <p>PDCAT 2026 registration is open now. Please click on the link to register for the conference: <a href="register.html#page_top" class="btn btn-sm btn-primary">REGISTER NOW(TODO)</a></p>
+                  <p>Registration guidelines for PDCAT 2026, December 4–6, 2026, Changsha, China.</p>
+                  <div class="alert alert-warning">
+                    <strong>Submit and check your registration online.</strong> Use the registration form below to submit your details and payment receipt. Use your registration email on the separate payment query page to check the review status.
+                    <span lang="zh-CN">通过下方登记页面提交信息和付款凭证。请在独立查询页面使用登记邮箱查询缴费状态。</span>
+                  </div>
+                  <p><a href="registration-form.html" class="btn btn-primary">Registration Form / 填写注册信息</a> <a href="registration-query.html" class="btn btn-outline-primary">Payment Query / 查询缴费信息</a></p>
+                  <p><a href="#registration-steps">Registration steps</a> · <a href="#payment-methods">Payment details</a> · <a href="#hotel-booking">Hotel booking</a> · <a href="#registration-contact">Contact</a></p>
                   <p> <strong> At least one author of each accepted paper must register to ensure that the paper will be included in the PDCAT 2026 conference proceedings. Note that each accepted paper must have at least one full registration.</strong> </p>
                   <p> If you have any special dietary requirements for the conference dinner, please email <a href="mailto:luohuizhang@hnu.edu.cn">luohuizhang@hnu.edu.cn</a> by 30 November 2026.</p>
 
@@ -72,13 +76,13 @@
                     </tr>
                     <tr>
                       <td height="50" align="center" valign="middle">Author</td>
-                      <td align="center" valign="middle">$490</td>
+                      <td align="center" valign="middle">$510</td>
                       <td align="center" valign="middle">Author</td>
                       <td align="center" valign="middle">&yen;3400</td>
                     </tr>
                     <tr>
                       <td height="50" align="center" valign="middle">Attendee</td>
-                      <td align="center" valign="middle">$260</td>
+                      <td align="center" valign="middle">$270</td>
                       <td align="center" valign="middle">Attendee</td>
                       <td align="center" valign="middle">&yen;1800</td>
                     </tr>
@@ -88,13 +92,79 @@
                     </tr>
                   </table>
                   <br>
+                  <h3 class="section-heading" id="registration-steps">Registration Steps <span lang="zh-CN">注册步骤</span></h3>
+                  <ol>
+                    <li><strong>Confirm your registration category and fee.</strong> Each accepted paper requires at least one full author registration.</li>
+                    <li><strong>Pay the calculated amount in the currency shown on the form and keep your payment screenshot.</strong> Include your name and paper ID (if applicable) in the payment reference.</li>
+                    <li><strong>Complete the <a href="registration-form.html">registration form</a>.</strong> Submit your registration information and payment receipt, then save the confirmation receipt. A received submission remains pending until the organizers verify your payment. Use your registration email on the <a href="registration-query.html">payment query page</a> to check its status.</li>
+                  </ol>
+
+                  <h3 class="section-heading" id="payment-methods">Payment Details <span lang="zh-CN">付款信息</span></h3>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="payment-panel">
+                        <h4>Domestic Bank Transfer (RMB)<br><span lang="zh-CN">国内银行转账（人民币）</span></h4>
+                        <dl class="bank-details" lang="zh-CN">
+                          <dt>收款单位 / Beneficiary</dt><dd>湖南荣盛泰会议展览有限公司</dd>
+                          <dt>开户行 / Bank</dt><dd>长沙银行华瑞支行</dd>
+                          <dt>账号 / Account number</dt><dd>800271690608014</dd>
+                          <dt>税号 / Tax ID</dt><dd>91430111MA4M34HY8C</dd>
+                          <dt>地址 / Address</dt><dd>长沙市雨花区劳动东路222号永升商业广场C2栋413房</dd>
+                          <dt>电话 / Telephone</dt><dd><a href="tel:+8673184254899">0731-84254899</a></dd>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="payment-panel">
+                        <h4>Payment QR Code<br><span lang="zh-CN">付款二维码</span></h4>
+                        <a href="img/registration/payment-qr.png" aria-label="Open full-size payment QR code">
+                          <img class="qr-image" src="img/registration/payment-qr.png" alt="Bank of Changsha Hula payment QR code" width="1193" height="1271">
+                        </a>
+                        <p class="mb-0">Scan this code to pay the conference registration fee in RMB. Include your name and paper ID (if applicable), and keep the payment receipt.<br><span lang="zh-CN">此码用于支付会议注册费，仅收人民币。请备注姓名及论文编号（如有），并保存付款凭证。</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="payment-panel">
+                    <h4>Cross-border Bank Transfer (RMB / USD)<br><span lang="zh-CN">跨境银行汇款（人民币 / 美元）</span></h4>
+                    <p>This account accepts cross-border registration payments in RMB or USD.<br><span lang="zh-CN">此账户用于跨境注册费汇款，可收人民币或美元。</span></p>
+                    <dl class="bank-details">
+                      <dt>Beneficiary Name</dt><dd>CHANGSHA XINGYA HOTEL CO.,LTD.</dd>
+                      <dt><span lang="zh-CN">企业中文全称</span></dt><dd lang="zh-CN">长沙星亚酒店有限公司</dd>
+                      <dt>Beneficiary Bank</dt><dd>BANK OF CHANGSHA CO.,LTD.</dd>
+                      <dt>SWIFT Code</dt><dd>CHCCCNSS</dd>
+                      <dt>Beneficiary A/C No.</dt><dd>810000546399000001</dd>
+                      <dt>Bank Branch / <span lang="zh-CN">开户银行</span></dt><dd lang="zh-CN">长沙银行股份有限公司金城支行</dd>
+                      <dt>Beneficiary Address / <span lang="zh-CN">单位地址</span></dt><dd lang="zh-CN">湖南省长沙市岳麓区西湖街道金星中路247号佳兴国际汇广场酒店2301</dd>
+                      <dt>Telephone / <span lang="zh-CN">电话</span></dt><dd><a href="tel:+8673189788888">+86 731 89788888</a></dd>
+                    </dl>
+                  </div>
+
+                  <h3 class="section-heading" id="hotel-booking">Hotel Booking <span lang="zh-CN">酒店预订</span></h3>
+                  <div class="payment-panel">
+                    <div class="row align-items-center">
+                      <div class="col-md-4">
+                        <a href="img/registration/hotel-booking-qr.png" aria-label="Open full-size hotel booking WeChat code">
+                          <img class="qr-image" src="img/registration/hotel-booking-qr.png" alt="WorldHotel Grand Jiaxing Hunan hotel booking WeChat mini-program code" width="285" height="251">
+                        </a>
+                      </div>
+                      <div class="col-md-8">
+                        <h4>WorldHotel Grand Jiaxing Hunan<br><span lang="zh-CN">湖南佳兴世尊酒店</span></h4>
+                        <p>Scan the code with WeChat to access the hotel booking mini-program.<br><span lang="zh-CN">请使用微信扫描小程序码预约酒店房间。</span></p>
+                        <p>Room rates, available dates and booking conditions should be confirmed with the hotel.</p>
+                        <p class="mb-0">Telephone: <a href="tel:+8673189788888">+86 731 89788888</a> · <a href="venue.html">Venue information</a></p>
+                      </div>
+                    </div>
+                  </div>
+
                   <h3 class="section-heading">Terms and Conditions:</h3>
+                    <p class="text-muted">The existing terms below are pending organizer confirmation, including registration benefits and cancellation dates.</p>
                     <ol>
                       <li>
                         <strong>Full registration includes:</strong> Access to all PDCAT Workshops and electronic download of the workshop proceedings, catering during conference, and conference banquet.
                       </li>
                       <li>
                          PDCAT 2026 will adopt a hybrid format, combining both on-site and online presentation.
+                      </li>
                       <li>
                         <strong>Cancellation, Refund and No-show Policies</strong>
                         <ul>
@@ -112,6 +182,7 @@
                       <li>Please note that the Organizing Committee of the conference has no right to assist in the visa process. If your application is rejected, the Organizing Committee of the conference will not be able to change the decision of the Ministry of foreign affairs, and the organizing committee will not discuss or communicate with the embassy. If the applicant’s visa is refused, the registration fee cannot be refunded.</li>
                       <li>It will take about one month for the embassy to process the visa application. Please register as early as possible to ensure that you have enough time to apply for the visa.</li>
                     </ol>
+                    <h3 class="section-heading" id="registration-contact">Contact</h3>
                     <p>
                       Please contact Dr. Huizhang Luo (<a href="mailto:luohuizhang@hnu.edu.cn">luohuizhang@hnu.edu.cn</a>) if you have any questions.
                     </p>
@@ -120,8 +191,6 @@
 
           </div>
         </div>
-      </div>
-
     </section>
 
      <!-- <section id="register">
@@ -147,7 +216,7 @@
     <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="../js/creative.min.js"></script>
+
 
 
 <script>
@@ -155,6 +224,10 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar-placeholder").innerHTML = data;
+        // The template reads #mainNav immediately, so load it after the navbar exists.
+        const templateScript = document.createElement('script');
+        templateScript.src = '../js/creative.min.js';
+        document.body.appendChild(templateScript);
         const currentPage = window.location.pathname.split("/").pop();
         document.querySelectorAll(".nav-link[data-page]").forEach(link => {
           if (link.getAttribute("data-page") === currentPage) {
