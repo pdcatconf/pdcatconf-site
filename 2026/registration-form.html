@@ -309,7 +309,7 @@
           <div class="form-group"><label for="amount">Payment amount (automatically calculated)</label><input class="form-control" id="amount" readonly aria-describedby="amount-help"><small id="amount-help" class="form-text text-muted">Select your country or region and category. China, China (Hong Kong), China (Macao) and China (Taiwan) use RMB; all other countries and regions use USD. The server verifies the amount. Payment is confirmed only after review of your screenshot.</small></div>
           <div class="form-group"><label for="payment-method">Payment method *</label><select class="form-control" id="payment-method" name="payment_method" required><option value="" disabled selected hidden>Select a payment method</option><option value="domestic_transfer">Domestic bank transfer (RMB)</option><option value="qr">Payment QR code (RMB)</option><option value="cross_border">Cross-border bank transfer (RMB / USD)</option></select></div>
           <div class="form-group"><label for="payer">Payer name or organization *</label><input class="form-control" id="payer" name="payer" maxlength="250" required></div>
-          <div class="form-group"><label for="payment-date">Payment date *</label><input class="form-control" type="text" id="payment-date" name="payment_date" placeholder="YYYY-MM-DD" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" maxlength="10" required></div>
+          <div class="form-group"><label for="payment-date">Payment date *</label><input class="form-control" type="date" id="payment-date" name="payment_date" required></div>
           <div class="form-group"><label for="transaction-reference">Transaction reference or transfer note</label><input class="form-control" id="transaction-reference" name="transaction_reference" maxlength="250"></div>
           <div class="form-group"><label for="receipt">Payment screenshot *</label><input class="sr-only" type="file" id="receipt" name="receipt" accept=".jpg,.jpeg,.png" aria-describedby="receipt-help" required><label for="receipt" class="btn btn-primary">Choose screenshot</label><span id="receipt-filename" aria-live="polite" style="display:block;overflow-wrap:anywhere">No file selected</span><small class="form-text text-muted" id="receipt-help">A JPG or PNG payment screenshot is required, up to 10 MB. Selecting a file does not upload it.</small></div>
         </section>
@@ -318,11 +318,11 @@
           <div class="form-group"><label for="tax-id">Tax ID</label><input class="form-control" id="tax-id" name="tax_id" maxlength="100"></div>
           <div class="form-group"><label for="notes">Notes</label><textarea class="form-control" id="notes" name="notes" rows="3" maxlength="2000"></textarea></div>
         </section>
-        <div class="form-section"><p id="privacy-notice">Your details and payment screenshot are sent to the PDCAT registration server for registration, payment verification and invoicing. Anyone who knows your registration email can look up payment status and amounts. Other details and screenshots are restricted to authorized organizers. For corrections, contact the organizers using the registration instructions page.</p><label><input type="checkbox" name="consent" value="yes" required aria-describedby="privacy-notice"> I agree to this use of my information. *</label></div>
+        <div class="form-section"><p id="privacy-notice">Your details and payment screenshot are sent to the PDCAT registration server for registration, payment verification and invoicing. Anyone who knows your registration email can look up paper IDs, submission times, payment status and amounts. Other details and screenshots are restricted to authorized organizers. For corrections, contact the organizers using the registration instructions page.</p><label><input type="checkbox" name="consent" value="yes" required aria-describedby="privacy-notice"> I agree to this use of my information. *</label></div>
         <button class="btn btn-primary" type="submit">Submit registration</button>
       </fieldset><p id="form-status" role="status" class="mt-3" aria-live="polite"></p>
     </form>
-    <section id="submission-result" class="alert alert-success" hidden aria-labelledby="saved-title"><h2 id="saved-title">Submission received</h2><p>Payment awaits review. Save this confirmation receipt before leaving this page.</p><p><strong>Registration ID: </strong><span id="saved-id"></span></p><button type="button" id="save-confirmation" class="btn btn-primary">Save confirmation receipt</button> <button type="button" id="new-registration" class="btn btn-outline-secondary">Start another registration</button></section>
+    <section id="submission-result" class="alert alert-success" hidden aria-labelledby="saved-title"><h2 id="saved-title">Submission received</h2><p>Payment awaits review. Save this confirmation receipt before leaving this page.</p><p><strong>Registration ID: </strong><span id="saved-id"></span></p><p><strong>Paper ID: </strong><span id="saved-paper-id"></span></p><p><strong>Submitted at (UTC+8): </strong><span id="saved-created-at"></span></p><button type="button" id="save-confirmation" class="btn btn-primary">Save confirmation receipt</button> <button type="button" id="new-registration" class="btn btn-outline-secondary">Start another registration</button></section>
   </main>
   <div id="footer-placeholder"></div>
   <script src="../vendor/jquery/jquery.min.js"></script>
@@ -337,6 +337,6 @@
     }).catch(console.error);
   </script>
   <script src="js/pdcat-dropdown.js"></script>
-  <script src="js/registration-form.js?v=20261027-fees"></script>
+  <script src="js/registration-form.js?v=20261101-records"></script>
 </body>
 </html>

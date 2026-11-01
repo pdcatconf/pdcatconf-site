@@ -1,6 +1,9 @@
 'use strict';
 
-const API_BASE = 'https://101.37.245.203';
+const adminForm = document.getElementById('registration-form').dataset.admin === 'true';
+const API_BASE = adminForm ? location.origin : 'https://101.37.245.203';
+const pendingKey = adminForm ? 'pdcat2026-admin-pending-code' : 'pdcat2026-pending-code';
+const submittedAt = value => new Date(value).toLocaleString('en-GB',{timeZone:'Asia/Shanghai',hour12:false});
 const registrationForm = document.getElementById('registration-form');
 const category = document.getElementById('category');
 const receipt = document.getElementById('receipt');
@@ -8,7 +11,7 @@ const formStatus = document.getElementById('form-status');
 const fields = document.getElementById('registration-fields');
 const byId = id => document.getElementById(id);
 let queryCode = '', saved = null;
-try { queryCode=sessionStorage.getItem('pdcat2026-pending-code')||''; } catch (_) { /* The random key prevents duplicates on retry; it is not used for email lookup. */ }
+try { queryCode=sessionStorage.getItem(pendingKey)||''; } catch (_) { /* The random key prevents duplicates on retry; it is not used for email lookup. */ }
 
 function updateRegistrationCategory() {
   const author = category.value === 'author';
@@ -35,8 +38,9 @@ receipt.addEventListener('change', () => {
 async function request(path, body, json=false) {
   const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),90000);
   try{
-    const response=await fetch(API_BASE+path,{method:'POST',body:json?JSON.stringify(body):body,headers:json?{'Content-Type':'application/json'}:undefined,credentials:'omit',cache:'no-store',signal:controller.signal});
+    const response=await fetch(API_BASE+path,{method:'POST',body:json?JSON.stringify(body):body,headers:json?{'Content-Type':'application/json'}:undefined,credentials:adminForm?'same-origin':'omit',cache:'no-store',signal:controller.signal});
     const data=await response.json().catch(()=>({error:'Service unavailable. Please retry.'}));
+    if(response.status===401&&adminForm){location.href='/admin/';throw new Error('Please sign in again.');}
     if(!response.ok){const error=new Error(data.error||'Request failed');error.registrationId=data.id;throw error;}
     return data;
   }catch(error){
@@ -49,26 +53,32 @@ registrationForm.addEventListener('submit', async event => {
   event.preventDefault();
   if(saved)return;
   if(!queryCode){const bytes=crypto.getRandomValues(new Uint8Array(32));queryCode=Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('');}
-  try{sessionStorage.setItem('pdcat2026-pending-code',queryCode);}catch(_){}
+  try{sessionStorage.setItem(pendingKey,queryCode);}catch(_){}
   const body=new FormData(registrationForm);body.set('query_code',queryCode);
   fields.disabled=true;formStatus.textContent='Submitting…';
   try{
-    saved=await request('/api/registrations',body);
+    saved=await request(adminForm?'/api/admin/registrations':'/api/registrations',body);
     byId('saved-id').textContent=saved.id;saved.email=body.get('email');
+    byId('saved-paper-id').textContent=saved.paper_id||'Not applicable';byId('saved-created-at').textContent=submittedAt(saved.created_at);
     byId('submission-result').hidden=false;
     formStatus.textContent=saved.message;
-    try{sessionStorage.removeItem('pdcat2026-pending-code');}catch(_){}
+    try{sessionStorage.removeItem(pendingKey);}catch(_){}
     byId('submission-result').scrollIntoView({behavior:'smooth',block:'center'});
   }catch(error){formStatus.textContent=error.message;fields.disabled=false;updateRegistrationCategory();}
 });
 
 byId('save-confirmation').addEventListener('click',()=>{
-  const content=`PDCAT 2026 registration confirmation\nRegistration ID: ${saved.id}\nRegistration email: ${saved.email}\nPayment query: https://pdcat2026.github.io/pdcatconf-site/2026/registration-query.html\nReceived; payment awaits review.\n`;
+  const content=`PDCAT 2026 registration confirmation\nRegistration ID: ${saved.id}\nRegistration email: ${saved.email}\nPaper ID: ${saved.paper_id||'Not applicable'}\nSubmitted at (UTC+8): ${submittedAt(saved.created_at)}\nPayment query: ${adminForm?'https://www.pd-cat.org/2026/registration-query.html':new URL('registration-query.html', location.href).href}\nReceived; payment awaits review.\n`;
   const url=URL.createObjectURL(new Blob([content],{type:'text/plain;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download=saved.id+'.txt';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
 byId('new-registration').addEventListener('click',()=>{
   saved=null;queryCode='';registrationForm.reset();byId('receipt-filename').textContent='No file selected';fields.disabled=false;receipt.setCustomValidity('');updateRegistrationCategory();formStatus.textContent='';byId('submission-result').hidden=true;
-  try{sessionStorage.removeItem('pdcat2026-pending-code');}catch(_){}
+  try{sessionStorage.removeItem(pendingKey);}catch(_){}
 });
-fields.disabled=false;
-updateRegistrationCategory();
+if(adminForm){
+  fetch('/api/admin/session',{credentials:'same-origin',cache:'no-store'}).then(response=>{
+    if(response.status===401){location.href='/admin/';return;}
+    if(!response.ok)throw new Error('Unable to verify your session. Reload to retry.');
+    fields.disabled=false;updateRegistrationCategory();
+  }).catch(error=>{formStatus.textContent=error.message;});
+}else{fields.disabled=false;updateRegistrationCategory();}

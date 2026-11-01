@@ -15,7 +15,7 @@ queryForm.addEventListener('submit',async event=>{
    const section=document.createElement('section');section.className='form-section';const title=document.createElement('h3');title.textContent=`Registration ${index+1} / 登记 ${index+1}`;section.append(title);
    const currency=item.currency==='USD'?'USD':'RMB';
    const money=value=>value===null?'Not confirmed / 尚未确认':currency+' '+(value/100).toFixed(2);
-   for(const [label,value] of [['Status / 缴费状态',paymentLabels[item.status]],['Amount due / 应缴金额',money(item.expected_cents)],['Registration amount / 登记金额',money(item.paid_cents)],['Confirmed paid / 已确认缴费',money(item.confirmed_cents)]]){
+   for(const [label,value] of [['Paper ID',item.paper_id||'Not applicable'],['Submitted at (UTC+8)',item.created_at?new Date(item.created_at).toLocaleString('en-GB',{timeZone:'Asia/Shanghai',hour12:false}):'—'],['Status / 缴费状态',paymentLabels[item.status]],['Amount due / 应缴金额',money(item.expected_cents)],['Registration amount / 登记金额',money(item.paid_cents)],['Confirmed paid / 已确认缴费',money(item.confirmed_cents)]]){
     const row=document.createElement('div');row.className='result-row';const key=document.createElement('strong'),val=document.createElement('span');key.textContent=label;val.textContent=value;row.append(key,val);section.append(row);
    }
    queryResult.append(section);
